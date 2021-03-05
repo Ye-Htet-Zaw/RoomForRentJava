@@ -21,7 +21,7 @@ public class RoomDetailDto {
 	private int rent;
 	private int deposit;
 	private String longitude;
-	private String lattitude;
+	private String latitude;
 	private String recommented_points;
 	private String contract_rule;
 	private String period;
@@ -133,11 +133,11 @@ public class RoomDetailDto {
 	public void setLongitude(String longitude) {
 		this.longitude = longitude;
 	}
-	public String getLattitude() {
-		return lattitude;
+	public String getLatitude() {
+		return latitude;
 	}
-	public void setLattitude(String lattitude) {
-		this.lattitude = lattitude;
+	public void setLatitude(String latitude) {
+		this.latitude = latitude;
 	}
 	public String getRecommented_points() {
 		return recommented_points;
