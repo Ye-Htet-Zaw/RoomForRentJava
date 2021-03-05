@@ -10,4 +10,6 @@ public interface UserMapper {
 
 	UserDto getUserWithEmailAndPassword(LoginDto loginDto);
 
+	UserDto getUserInfo(String user_id);
+
 }

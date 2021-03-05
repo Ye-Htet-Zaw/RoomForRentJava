@@ -23,4 +23,10 @@ public class UserController {
 		loginDto.setPassword(password);
 		return userService.getUserWithEmailAndPassword(loginDto);
 	}
+	
+	@GetMapping("/getUserInfo/{user_id}")
+	public UserDto getUserInfo(@PathVariable(value = "user_id")String user_id) {
+		return userService.getUserInfo(user_id);
+		
+	}
 }

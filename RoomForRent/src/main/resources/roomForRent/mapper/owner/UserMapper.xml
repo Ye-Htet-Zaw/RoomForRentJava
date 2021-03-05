@@ -13,4 +13,16 @@
         AND
         password=#{password}
     </select>
+    
+    
+  <select id="getUserInfo" resultType="roomForRent.dto.owner.UserDto"
+        parameterType="String">
+        SELECT
+        *
+        FROM
+        TBL_USER
+        WHERE
+        user_id=#{user_id}
+        
+    </select>  
 </mapper>

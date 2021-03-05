@@ -19,4 +19,9 @@ public class UserService {
 		return userMapper.getUserWithEmailAndPassword(loginDto);
 	}
 
+	public UserDto getUserInfo(String user_id) {
+		// TODO Auto-generated method stub
+		return userMapper.getUserInfo(user_id);
+	}
+
 }
