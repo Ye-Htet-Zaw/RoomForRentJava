@@ -9,7 +9,7 @@ import roomForRent.dto.renter.RoomDetailDto;
 import roomForRent.service.renter.RoomDetailService;
 
 @RestController
-public class RoomDetailController {
+public class HouseDetailController {
 
 	@Autowired
 	RoomDetailService roomDetailService;
