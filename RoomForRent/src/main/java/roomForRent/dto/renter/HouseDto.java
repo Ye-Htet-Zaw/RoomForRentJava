@@ -7,6 +7,7 @@ import lombok.Data;
 @Data
 public class HouseDto {
 
+	
 	String HOUSE_ID;
 	String USER_ID;
 	String CATEGORY_ID;
