@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="roomForRent.mapper.renter.SearchRoomMapper">
+<select id="getAllRoomList"
+		resultType="roomForRent.dto.renter.HouseDto">
+		SELECT
+		*
+		FROM
+		TBL_HOUSE
+	</select>
+
+	<select id="getCategoryId" resultType="String"
+		parameterType="String">
+		SELECT
+		CATEGORY_ID
+		FROM
+		TBL_CATEGORY
+		WHERE
+		CATEGORY_NAME=#{categoryName}
+	</select>
+	<select id="getRoomListByCategory"
+		resultType="roomForRent.dto.renter.HouseDto" parameterType="String">
+		SELECT
+		*
+		FROM
+		TBL_HOUSE
+		WHERE
+		CATEGORY_ID=#{categoryId}
+	</select>
+	<select id="getRoomListByTownship"
+		resultType="roomForRent.dto.renter.HouseDto" parameterType="String">
+		SELECT
+		*
+		FROM
+		TBL_HOUSE
+		WHERE
+		TOWNSHIP=#{township}
+	</select>
+	<select id="getRoomListByAmount"
+		resultType="roomForRent.dto.renter.HouseDto" parameterType="Integer">
+		SELECT
+		*
+		FROM
+		TBL_HOUSE
+		WHERE
+		RENT &lt;= #{rentprice}+50000
+		AND
+		RENT &gt;= #{rentprice}-50000
+	</select>
+	<select id="getRoomListByPeroid"
+		resultType="roomForRent.dto.renter.HouseDto" parameterType="Integer">
+		SELECT
+		*
+		FROM
+		TBL_HOUSE
+		WHERE
+		PERIOD=#{period}
+	</select>
+</mapper>
