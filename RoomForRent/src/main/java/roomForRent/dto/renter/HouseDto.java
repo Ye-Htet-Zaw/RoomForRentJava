@@ -2,12 +2,9 @@ package roomForRent.dto.renter;
 
 import java.sql.Timestamp;
 import java.util.Date;
-import lombok.Data;
 
-@Data
 public class HouseDto {
 
-	
 	String HOUSE_ID;
 	String USER_ID;
 	String CATEGORY_ID;
