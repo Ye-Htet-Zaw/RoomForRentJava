@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="roomForRent.mapper.renter.RoomDetailMapper">
-	<select id="getRoomDetailById" parameterType="String" resultType="roomForRent.dto.renter.RoomDetailDto">
+<mapper namespace="roomForRent.mapper.renter.HouseDetailMapper">
+	<select id="getHouseDetailById" parameterType="String" resultType="roomForRent.dto.renter.HouseDetailDto">
 		SELECT 
 			 HOUSE_ADDRESS
 			,NO_OF_GUESTS

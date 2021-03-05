@@ -5,18 +5,18 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-import roomForRent.dto.renter.RoomDetailDto;
-import roomForRent.service.renter.RoomDetailService;
+import roomForRent.dto.renter.HouseDetailDto;
+import roomForRent.service.renter.HouseDetailService;
 
 @RestController
 public class HouseDetailController {
 
 	@Autowired
-	RoomDetailService roomDetailService;
+	HouseDetailService houseDetailService;
 	
-	@GetMapping("/roomDetail/{id}")
-	public RoomDetailDto getRoomDetailById(@PathVariable(value = "id") String houseId) {	
-		RoomDetailDto roomDetailById = roomDetailService.getRoomDetailById(houseId);	
-		return roomDetailById;
+	@GetMapping("/houseDetail/{id}")
+	public HouseDetailDto getHouseDetailById(@PathVariable(value = "id") String houseId) {	
+		HouseDetailDto houseDetailById = houseDetailService.getHouseDetailById(houseId);	
+		return houseDetailById;
 	}
 }

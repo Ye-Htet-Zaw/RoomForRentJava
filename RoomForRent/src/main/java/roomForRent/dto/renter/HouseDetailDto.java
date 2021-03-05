@@ -2,7 +2,7 @@ package roomForRent.dto.renter;
 
 import java.util.Date;
 
-public class RoomDetailDto {
+public class HouseDetailDto {
 	private String house_id;
 	private String user_id;
 	private String category_id;
