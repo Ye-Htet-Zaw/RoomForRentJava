@@ -8,6 +8,16 @@ import org.springframework.stereotype.Service;
 import roomForRent.dto.renter.HouseListDto;
 import roomForRent.mapper.renter.HouseListMapper;
 
+
+/**
+*
+* HouseListService
+*
+* 2021/03/08 HNT Create New
+*
+* house list service
+*/
+
 @Service
 public class HouseListService {
 	

@@ -9,6 +9,16 @@ import org.springframework.web.bind.annotation.RestController;
 import roomForRent.dto.renter.HouseListDto;
 import roomForRent.service.renter.HouseListService;
 
+
+/**
+*
+*  HouseListController
+*
+* 2021/03/08 HNT Create New
+*
+* house list
+*/
+
 @RestController
 public class HouseListController {
 
