@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import roomForRent.dto.renter.HouseDto;
+import roomForRent.dto.renter.SearchParameterDto;
 import roomForRent.mapper.renter.SearchRoomMapper;
 
 @Service
@@ -36,6 +37,30 @@ public class SearchRoomService {
 
 	public List<HouseDto> getRoomListByPeroid(Integer period) {
 		return searchRoomMapper.getRoomListByPeroid(period);
+	}
+	
+	public List<HouseDto> getRoomListByCategoryAndTownShip(SearchParameterDto paramDto) {
+		return searchRoomMapper.getRoomListByCategoryAndTownShip(paramDto);
+	}
+
+	public List<HouseDto> getRoomListByCategoryAndAmount(SearchParameterDto paramDto) {
+		return searchRoomMapper.getRoomListByCategoryAndAmount(paramDto);
+	}
+
+	public List<HouseDto> getRoomListByCategoryAndPeriod(SearchParameterDto paramDto) {
+		return searchRoomMapper.getRoomListByCategoryAndPeriod(paramDto);
+	}
+
+	public List<HouseDto> getRoomListByTownshipAndRent(SearchParameterDto paramDto) {
+		return searchRoomMapper.getRoomListByTownshipAndRent(paramDto);
+	}
+
+	public List<HouseDto> getRoomListByTownshipAndPeriod(SearchParameterDto paramDto) {
+		return searchRoomMapper.getRoomListByTownshipAndPeriod(paramDto);
+	}
+
+	public List<HouseDto> getRoomListByAmountAndPeriod(SearchParameterDto paramDto) {
+		return searchRoomMapper.getRoomListByAmountAndPeriod(paramDto);
 	}
 
 }
