@@ -7,7 +7,13 @@ package roomForRent.dto.owner;
 * For Login User
 */
 import java.util.Date;
-
+/**
+*UserDto
+*
+* 2021/03/05 CSH Create New
+*
+* For owner profile
+*/
 public class UserDto {
 private String user_id;
 private String user_name;
