@@ -1,5 +1,11 @@
 package roomForRent.dto.owner;
-
+/**
+*UserLoginDto
+*
+* 2021/03/05 NTTT Create New
+*
+* For Login User
+*/
 public class LoginDto {
 	String user_email;
 	String password;

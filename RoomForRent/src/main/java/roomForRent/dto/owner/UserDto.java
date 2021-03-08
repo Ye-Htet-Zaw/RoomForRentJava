@@ -1,5 +1,11 @@
 package roomForRent.dto.owner;
-
+/**
+*LoginDto
+*
+* 2021/03/05 NTTT Create New
+*
+* For Login User
+*/
 import java.util.Date;
 
 public class UserDto {
