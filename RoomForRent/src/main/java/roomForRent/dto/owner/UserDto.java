@@ -1,4 +1,5 @@
 package roomForRent.dto.owner;
+import java.sql.Timestamp;
 /**
 *LoginDto
 *
@@ -21,12 +22,21 @@ private int user_gender;
 private Date user_dob;
 private int user_position;
 private int delete_flag;
-private Date delete_datetime;
+private Timestamp delete_datetime;
 private String creator_id;
-private Date create_datetime;
+private Timestamp create_datetime;
 private String updator_id;
-private Date update_datetime;
+private Timestamp update_datetime;
 
+public void setDelete_datetime(Timestamp delete_datetime) {
+	this.delete_datetime = delete_datetime;
+}
+public void setCreate_datetime(Timestamp create_datetime) {
+	this.create_datetime = create_datetime;
+}
+public void setUpdate_datetime(Timestamp update_datetime) {
+	this.update_datetime = update_datetime;
+}
 public String getPhone_one() {
 	return phone_one;
 }
@@ -72,9 +82,7 @@ public void setDelete_flag(int delete_flag) {
 public Date getDelete_datetime() {
 	return delete_datetime;
 }
-public void setDelete_datetime(Date delete_datetime) {
-	this.delete_datetime = delete_datetime;
-}
+
 public String getCreator_id() {
 	return creator_id;
 }
@@ -84,9 +92,7 @@ public void setCreator_id(String creator_id) {
 public Date getCreate_datetime() {
 	return create_datetime;
 }
-public void setCreate_datetime(Date create_datetime) {
-	this.create_datetime = create_datetime;
-}
+
 public String getUpdator_id() {
 	return updator_id;
 }
@@ -96,9 +102,7 @@ public void setUpdator_id(String updator_id) {
 public Date getUpdate_datetime() {
 	return update_datetime;
 }
-public void setUpdate_datetime(Date update_datetime) {
-	this.update_datetime = update_datetime;
-}
+
 public String getUser_id() {
 	return user_id;
 }

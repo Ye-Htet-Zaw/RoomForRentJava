@@ -14,6 +14,8 @@ import roomForRent.dto.owner.UserDto;
 @Mapper
 public interface UserLoginMapper {
 
-	UserDto getUserWithEmailAndPassword(LoginDto loginDto);
+	//UserDto getUserWithEmailAndPassword(LoginDto loginDto);
+
+	UserDto getUserWithEmailAndPassword(UserDto loginDto);
 
 }

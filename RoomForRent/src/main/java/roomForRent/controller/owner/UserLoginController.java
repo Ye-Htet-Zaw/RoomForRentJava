@@ -3,6 +3,7 @@ package roomForRent.controller.owner;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import roomForRent.dto.owner.LoginDto;
 import roomForRent.dto.owner.UserDto;
@@ -24,9 +25,11 @@ public class UserLoginController {
 	@GetMapping("/getUserWithEmailAndPassword/{user_email}&{password}")
 	public UserDto getUserWithEmailAndPassword(@PathVariable(value = "user_email") String user_email,
 			@PathVariable(value = "password") String password) {
-		LoginDto loginDto = new LoginDto();
+		UserDto loginDto = new UserDto();
 		loginDto.setUser_email(user_email);
 		loginDto.setPassword(password);
 		return userLoginService.getUserWithEmailAndPassword(loginDto);
 	}
+	
+	
 }
