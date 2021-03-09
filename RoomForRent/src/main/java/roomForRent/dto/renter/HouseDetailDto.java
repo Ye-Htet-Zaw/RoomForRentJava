@@ -1,11 +1,14 @@
+/**
+*
+* HouseDetailDto
+*
+* 2021/03/05 YHZ Create New
+*
+* HouseDetailDto
+*/
 package roomForRent.dto.renter;
 
-import java.util.Date;
-
 public class HouseDetailDto {
-	private String house_id;
-	private String user_id;
-	private String category_id;
 	private String house_address;
 	private int no_of_guests;
 	private int no_of_room;
@@ -17,7 +20,7 @@ public class HouseDetailDto {
 	private int wifi;
 	private String phone_one;
 	private String phone_two;
-	private Date available_date;
+	private String available_date;
 	private int rent;
 	private int deposit;
 	private String longitude;
@@ -25,24 +28,7 @@ public class HouseDetailDto {
 	private String recommented_points;
 	private String contract_rule;
 	private String period;
-	public String getHouse_id() {
-		return house_id;
-	}
-	public void setHouse_id(String house_id) {
-		this.house_id = house_id;
-	}
-	public String getUser_id() {
-		return user_id;
-	}
-	public void setUser_id(String user_id) {
-		this.user_id = user_id;
-	}
-	public String getCategory_id() {
-		return category_id;
-	}
-	public void setCategory_id(String category_id) {
-		this.category_id = category_id;
-	}
+	
 	public String getHouse_address() {
 		return house_address;
 	}
@@ -109,10 +95,11 @@ public class HouseDetailDto {
 	public void setPhone_two(String phone_two) {
 		this.phone_two = phone_two;
 	}
-	public Date getAvailable_date() {
+	
+	public String getAvailable_date() {
 		return available_date;
 	}
-	public void setAvailable_date(Date available_date) {
+	public void setAvailable_date(String available_date) {
 		this.available_date = available_date;
 	}
 	public int getRent() {
