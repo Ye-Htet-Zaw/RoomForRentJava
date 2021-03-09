@@ -1,5 +1,4 @@
 package roomForRent.dto.owner;
-import java.sql.Timestamp;
 /**
 *LoginDto
 *
@@ -8,7 +7,13 @@ import java.sql.Timestamp;
 * For Login User
 */
 import java.util.Date;
-
+/**
+*UserDto
+*
+* 2021/03/05 CSH Create New
+*
+* For owner profile
+*/
 public class UserDto {
 private String user_id;
 private String user_name;
@@ -22,24 +27,63 @@ private int user_gender;
 private Date user_dob;
 private int user_position;
 private int delete_flag;
-private Timestamp delete_datetime;
+private Date delete_datetime;
 private String creator_id;
-private Timestamp create_datetime;
+private Date create_datetime;
 private String updator_id;
-private Timestamp update_datetime;
+private Date update_datetime;
 
-public void setDelete_datetime(Timestamp delete_datetime) {
+
+
+public UserDto(String user_id, String user_name, String user_email, String facebook_id, String password,
+		String phone_one, String phone_two, String user_address, int user_gender, Date user_dob, int user_position) {
+	super();
+	this.user_id = user_id;
+	this.user_name = user_name;
+	this.user_email = user_email;
+	this.facebook_id = facebook_id;
+	this.password = password;
+	this.phone_one = phone_one;
+	this.phone_two = phone_two;
+	this.user_address = user_address;
+	this.user_gender = user_gender;
+	this.user_dob = user_dob;
+	this.user_position = user_position;
+}
+
+
+public UserDto(String user_id, String user_name, String user_email, String facebook_id, String password,
+		String phone_one, String phone_two, String user_address, int user_gender, Date user_dob, int user_position,
+		int delete_flag, Date delete_datetime, String creator_id, Date create_datetime, String updator_id,
+		Date update_datetime) {
+	super();
+	this.user_id = user_id;
+	this.user_name = user_name;
+	this.user_email = user_email;
+	this.facebook_id = facebook_id;
+	this.password = password;
+	this.phone_one = phone_one;
+	this.phone_two = phone_two;
+	this.user_address = user_address;
+	this.user_gender = user_gender;
+	this.user_dob = user_dob;
+	this.user_position = user_position;
+	this.delete_flag = delete_flag;
 	this.delete_datetime = delete_datetime;
-}
-public void setCreate_datetime(Timestamp create_datetime) {
+	this.creator_id = creator_id;
 	this.create_datetime = create_datetime;
-}
-public void setUpdate_datetime(Timestamp update_datetime) {
+	this.updator_id = updator_id;
 	this.update_datetime = update_datetime;
 }
+
+
+
 public String getPhone_one() {
 	return phone_one;
 }
+
+
+
 public void setPhone_one(String phone_one) {
 	this.phone_one = phone_one;
 }
@@ -82,7 +126,9 @@ public void setDelete_flag(int delete_flag) {
 public Date getDelete_datetime() {
 	return delete_datetime;
 }
-
+public void setDelete_datetime(Date delete_datetime) {
+	this.delete_datetime = delete_datetime;
+}
 public String getCreator_id() {
 	return creator_id;
 }
@@ -92,7 +138,9 @@ public void setCreator_id(String creator_id) {
 public Date getCreate_datetime() {
 	return create_datetime;
 }
-
+public void setCreate_datetime(Date create_datetime) {
+	this.create_datetime = create_datetime;
+}
 public String getUpdator_id() {
 	return updator_id;
 }
@@ -102,7 +150,9 @@ public void setUpdator_id(String updator_id) {
 public Date getUpdate_datetime() {
 	return update_datetime;
 }
-
+public void setUpdate_datetime(Date update_datetime) {
+	this.update_datetime = update_datetime;
+}
 public String getUser_id() {
 	return user_id;
 }
