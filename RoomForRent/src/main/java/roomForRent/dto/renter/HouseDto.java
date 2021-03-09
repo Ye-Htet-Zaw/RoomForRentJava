@@ -3,6 +3,14 @@ package roomForRent.dto.renter;
 import java.sql.Timestamp;
 import java.util.Date;
 
+/**
+*
+  HouseDto
+*
+* 2021/03/08 KMMN Create New
+*
+* house dto
+*/
 public class HouseDto {
 
 	String HOUSE_ID;

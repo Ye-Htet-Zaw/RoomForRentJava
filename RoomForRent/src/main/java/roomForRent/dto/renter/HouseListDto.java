@@ -1,5 +1,15 @@
 package roomForRent.dto.renter;
 
+
+/**
+*
+*  HouseListDto
+*
+* 2021/03/08 HNT Create New
+*
+* house list dto
+*/
+
 public class HouseListDto {
 	private String house_id;
 	private String user_id;

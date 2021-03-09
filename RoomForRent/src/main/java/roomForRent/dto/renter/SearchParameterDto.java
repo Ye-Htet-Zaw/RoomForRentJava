@@ -1,5 +1,13 @@
 package roomForRent.dto.renter;
 
+/**
+*
+  SearchParameterDto
+*
+* 2021/03/08 KMMN Create New
+*
+* search room parameter
+*/
 public class SearchParameterDto {
 
 	String CATEGORY_ID;

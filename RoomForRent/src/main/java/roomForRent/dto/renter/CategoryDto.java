@@ -2,6 +2,14 @@ package roomForRent.dto.renter;
 
 import java.sql.Timestamp;
 
+/**
+*
+  CategoryDto
+*
+* 2021/03/08 KMMN Create New
+*
+* category dto
+*/
 public class CategoryDto {
 	String CATEGORY_ID;
 	String CATEGORY_NAME;

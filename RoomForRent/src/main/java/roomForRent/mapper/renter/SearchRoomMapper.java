@@ -7,6 +7,14 @@ import org.apache.ibatis.annotations.Mapper;
 import roomForRent.dto.renter.HouseDto;
 import roomForRent.dto.renter.SearchParameterDto;
 
+/**
+*
+  SearchRoomMapper
+*
+* 2021/03/08 KMMN Create New
+*
+* search room mapper
+*/
 @Mapper
 public interface SearchRoomMapper {
 

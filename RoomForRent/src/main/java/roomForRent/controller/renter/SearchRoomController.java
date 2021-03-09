@@ -9,6 +9,14 @@ import roomForRent.dto.renter.HouseDto;
 import roomForRent.dto.renter.SearchParameterDto;
 import roomForRent.service.renter.SearchRoomService;
 
+/**
+*
+  SearchRoomController
+*
+* 2021/03/08 KMMN Create New
+*
+* search room
+*/
 @RestController
 public class SearchRoomController {
 

@@ -7,6 +7,13 @@ import org.springframework.web.bind.annotation.RestController;
 import roomForRent.dto.owner.UserDto;
 import roomForRent.service.owner.UserService;
 
+/**
+*UserController
+*
+* 2021/03/05 CSH Create New
+*
+* For Owner Profile
+*/
 @RestController
 public class UserController {
 
