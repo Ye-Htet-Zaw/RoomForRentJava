@@ -33,9 +33,57 @@ private Date create_datetime;
 private String updator_id;
 private Date update_datetime;
 
+
+
+public UserDto(String user_id, String user_name, String user_email, String facebook_id, String password,
+		String phone_one, String phone_two, String user_address, int user_gender, Date user_dob, int user_position) {
+	super();
+	this.user_id = user_id;
+	this.user_name = user_name;
+	this.user_email = user_email;
+	this.facebook_id = facebook_id;
+	this.password = password;
+	this.phone_one = phone_one;
+	this.phone_two = phone_two;
+	this.user_address = user_address;
+	this.user_gender = user_gender;
+	this.user_dob = user_dob;
+	this.user_position = user_position;
+}
+
+
+public UserDto(String user_id, String user_name, String user_email, String facebook_id, String password,
+		String phone_one, String phone_two, String user_address, int user_gender, Date user_dob, int user_position,
+		int delete_flag, Date delete_datetime, String creator_id, Date create_datetime, String updator_id,
+		Date update_datetime) {
+	super();
+	this.user_id = user_id;
+	this.user_name = user_name;
+	this.user_email = user_email;
+	this.facebook_id = facebook_id;
+	this.password = password;
+	this.phone_one = phone_one;
+	this.phone_two = phone_two;
+	this.user_address = user_address;
+	this.user_gender = user_gender;
+	this.user_dob = user_dob;
+	this.user_position = user_position;
+	this.delete_flag = delete_flag;
+	this.delete_datetime = delete_datetime;
+	this.creator_id = creator_id;
+	this.create_datetime = create_datetime;
+	this.updator_id = updator_id;
+	this.update_datetime = update_datetime;
+}
+
+
+
 public String getPhone_one() {
 	return phone_one;
 }
+
+
+
 public void setPhone_one(String phone_one) {
 	this.phone_one = phone_one;
 }

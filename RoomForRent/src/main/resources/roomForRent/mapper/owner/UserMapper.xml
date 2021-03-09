@@ -8,11 +8,16 @@
   <select id="getUserInfo" resultType="roomForRent.dto.owner.UserDto"
         parameterType="String">
         SELECT
-        *
+          user_id,user_name,user_email,
+          facebook_id,password,phone_one,
+          phone_two,user_address,user_gender,
+          user_dob,user_position
         FROM
-        TBL_USER
+          TBL_USER
         WHERE
-        user_id=#{user_id}
+          user_id=#{user_id}
+        AND
+           delete_flag=0          
         
     </select>  
 </mapper>
