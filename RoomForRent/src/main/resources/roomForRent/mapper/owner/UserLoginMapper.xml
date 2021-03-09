@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="roomForRent.mapper.owner.UserLoginMapper">
 
-<select id="getUserWithEmailAndPassword" resultType="roomForRent.dto.owner.UserDto"
+<select id="getUserWithEmailAndPassword" resultType="roomForRent.dto.owner.LoginDto"
         parameterType="roomForRent.dto.owner.LoginDto">
         SELECT
         *

@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import roomForRent.dto.owner.LoginDto;
-import roomForRent.dto.owner.UserDto;
 import roomForRent.mapper.owner.UserLoginMapper;
 /**
 *UserLoginService
@@ -24,7 +23,7 @@ public class UserLoginService {
 		return userLoginMapper.getUserWithEmailAndPassword(loginDto);
 	}*/
 
-	public UserDto getUserWithEmailAndPassword(UserDto loginDto) {
+	public LoginDto getUserWithEmailAndPassword(LoginDto loginDto) {
 		// TODO Auto-generated method stub
 		return userLoginMapper.getUserWithEmailAndPassword(loginDto);
 	}

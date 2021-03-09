@@ -23,9 +23,9 @@ public class UserLoginController {
 	UserLoginService  userLoginService;
 	//LoginUser
 	@GetMapping("/getUserWithEmailAndPassword/{user_email}&{password}")
-	public UserDto getUserWithEmailAndPassword(@PathVariable(value = "user_email") String user_email,
+	public LoginDto getUserWithEmailAndPassword(@PathVariable(value = "user_email") String user_email,
 			@PathVariable(value = "password") String password) {
-		UserDto loginDto = new UserDto();
+		LoginDto loginDto = new LoginDto();
 		loginDto.setUser_email(user_email);
 		loginDto.setPassword(password);
 		return userLoginService.getUserWithEmailAndPassword(loginDto);
