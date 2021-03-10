@@ -41,5 +41,13 @@ public interface SearchRoomMapper {
 	List<HouseDto> getRoomListByTownshipAndPeriod(SearchParameterDto paramDto);
 
 	List<HouseDto> getRoomListByAmountAndPeriod(SearchParameterDto paramDto);
+	
+	List<HouseDto> getRoomListByCategoryAndAddressAndPeriod(SearchParameterDto paramDto);
+
+	List<HouseDto> getRoomListByCategoryAndAddressAndAmount(SearchParameterDto paramDto);
+
+	List<HouseDto> getRoomListByCategoryAndAmountAndPeriod(SearchParameterDto paramDto);
+
+	List<HouseDto> getRoomListByAddressAndAmountAndPeriod(SearchParameterDto paramDto);
 
 }

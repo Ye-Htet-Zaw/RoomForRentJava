@@ -181,4 +181,86 @@
 		AND
 		rent_FLAG=0
 	</select>
+	
+	<select id="getRoomListByCategoryAndAddressAndPeriod"
+		resultType="roomForRent.dto.renter.HouseDto"
+		parameterType="roomForRent.dto.renter.SearchParameterDto">
+		SELECT
+		*
+		FROM
+		TBL_HOUSE
+		WHERE
+		category_ID=#{CATEGORY_ID}
+		AND
+		township=#{TOWNSHIP}
+		AND
+		period=#{PERIOD}
+		AND
+		delete_FLAG=0
+		AND
+		rent_FLAG=0
+	</select>
+	
+	<select id="getRoomListByCategoryAndAddressAndAmount"
+		resultType="roomForRent.dto.renter.HouseDto"
+		parameterType="roomForRent.dto.renter.SearchParameterDto">
+		SELECT
+		*
+		FROM
+		TBL_HOUSE
+		WHERE
+		category_ID=#{CATEGORY_ID}
+		AND
+		township=#{TOWNSHIP}
+		AND
+		rent &lt;= #{RENT}+50000
+		AND
+		rent &gt;= #{RENT}-50000
+		AND
+		delete_FLAG=0
+		AND
+		rent_FLAG=0
+	</select>
+	
+	<select id="getRoomListByCategoryAndAmountAndPeriod"
+		resultType="roomForRent.dto.renter.HouseDto"
+		parameterType="roomForRent.dto.renter.SearchParameterDto">
+		SELECT
+		*
+		FROM
+		TBL_HOUSE
+		WHERE
+		category_ID=#{CATEGORY_ID}
+		AND
+		rent &lt;= #{RENT}+50000
+		AND
+		rent &gt;= #{RENT}-50000
+		AND
+		period=#{PERIOD}
+		AND
+		delete_FLAG=0
+		AND
+		rent_FLAG=0
+	</select>
+	
+	<select id="getRoomListByAddressAndAmountAndPeriod"
+		resultType="roomForRent.dto.renter.HouseDto"
+		parameterType="roomForRent.dto.renter.SearchParameterDto">
+		SELECT
+		*
+		FROM
+		TBL_HOUSE
+		WHERE
+		township=#{TOWNSHIP}
+		AND
+		rent &lt;= #{RENT}+50000
+		AND
+		rent &gt;= #{RENT}-50000
+		AND
+		period=#{PERIOD}
+		AND
+		delete_FLAG=0
+		AND
+		rent_FLAG=0
+	</select>
 </mapper>
