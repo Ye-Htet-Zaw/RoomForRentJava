@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="roomForRent.mapper.renter.SearchRoomMapper">
-<select id="getAllRoomList"
+	<select id="getAllRoomList"
 		resultType="roomForRent.dto.renter.HouseDto">
 		SELECT
 		*
 		FROM
 		TBL_HOUSE
 		WHERE
-		DELETE_FLAG=0
+		delete_FLAG=0
 		AND
-		RENT_FLAG=0
+		rent_FLAG=0
 	</select>
 
 	<select id="getCategoryId" resultType="String"
@@ -31,11 +31,11 @@
 		FROM
 		TBL_HOUSE
 		WHERE
-		CATEGORY_ID=#{categoryId}
+		category_ID=#{categoryId}
 		AND
-		DELETE_FLAG=0
+		delete_FLAG=0
 		AND
-		RENT_FLAG=0
+		rent_FLAG=0
 	</select>
 	<select id="getRoomListByTownship"
 		resultType="roomForRent.dto.renter.HouseDto" parameterType="String">
@@ -44,11 +44,11 @@
 		FROM
 		TBL_HOUSE
 		WHERE
-		TOWNSHIP=#{township}
+		township=#{township}
 		AND
-		DELETE_FLAG=0
+		delete_FLAG=0
 		AND
-		RENT_FLAG=0
+		rent_FLAG=0
 	</select>
 	<select id="getRoomListByAmount"
 		resultType="roomForRent.dto.renter.HouseDto" parameterType="Integer">
@@ -57,13 +57,13 @@
 		FROM
 		TBL_HOUSE
 		WHERE
-		RENT &lt;= #{rentprice}+50000
+		rent &lt;= #{rentprice}+50000
 		AND
-		RENT &gt;= #{rentprice}-50000
+		rent &gt;= #{rentprice}-50000
 		AND
-		DELETE_FLAG=0
+		delete_FLAG=0
 		AND
-		RENT_FLAG=0
+		rent_FLAG=0
 	</select>
 	<select id="getRoomListByPeroid"
 		resultType="roomForRent.dto.renter.HouseDto" parameterType="Integer">
@@ -72,11 +72,11 @@
 		FROM
 		TBL_HOUSE
 		WHERE
-		PERIOD=#{period}
+		period=#{period}
 		AND
-		DELETE_FLAG=0
+		delete_FLAG=0
 		AND
-		RENT_FLAG=0
+		rent_FLAG=0
 	</select>
 
 	<select id="getRoomListByCategoryAndTownShip"
@@ -87,13 +87,13 @@
 		FROM
 		TBL_HOUSE
 		WHERE
-		CATEGORY_ID=#{CATEGORY_ID}
+		category_ID=#{CATEGORY_ID}
 		AND
-		TOWNSHIP=#{TOWNSHIP}
+		township=#{TOWNSHIP}
 		AND
-		DELETE_FLAG=0
+		delete_FLAG=0
 		AND
-		RENT_FLAG=0
+		rent_FLAG=0
 	</select>
 	<select id="getRoomListByCategoryAndAmount"
 		resultType="roomForRent.dto.renter.HouseDto"
@@ -103,15 +103,15 @@
 		FROM
 		TBL_HOUSE
 		WHERE
-		CATEGORY_ID=#{CATEGORY_ID}
+		category_ID=#{CATEGORY_ID}
 		AND
-		RENT &lt;= #{RENT}+50000
+		rent &lt;= #{RENT}+50000
 		AND
-		RENT &gt;= #{RENT}-50000
+		rent &gt;= #{RENT}-50000
 		AND
-		DELETE_FLAG=0
+		delete_FLAG=0
 		AND
-		RENT_FLAG=0
+		rent_FLAG=0
 	</select>
 	<select id="getRoomListByCategoryAndPeriod"
 		resultType="roomForRent.dto.renter.HouseDto"
@@ -121,13 +121,13 @@
 		FROM
 		TBL_HOUSE
 		WHERE
-		CATEGORY_ID=#{CATEGORY_ID}
+		category_ID=#{CATEGORY_ID}
 		AND
-		PERIOD=#{PERIOD}
+		period=#{PERIOD}
 		AND
-		DELETE_FLAG=0
+		delete_FLAG=0
 		AND
-		RENT_FLAG=0
+		rent_FLAG=0
 	</select>
 	<select id="getRoomListByTownshipAndRent"
 		resultType="roomForRent.dto.renter.HouseDto"
@@ -137,15 +137,15 @@
 		FROM
 		TBL_HOUSE
 		WHERE
-		TOWNSHIP=#{TOWNSHIP}
+		township=#{TOWNSHIP}
 		AND
-		RENT &lt;= #{RENT}+50000
+		rent &lt;= #{RENT}+50000
 		AND
-		RENT &gt;= #{RENT}-50000
+		rent &gt;= #{RENT}-50000
 		AND
-		DELETE_FLAG=0
+		delete_FLAG=0
 		AND
-		RENT_FLAG=0
+		rent_FLAG=0
 	</select>
 	<select id="getRoomListByTownshipAndPeriod"
 		resultType="roomForRent.dto.renter.HouseDto"
@@ -155,13 +155,13 @@
 		FROM
 		TBL_HOUSE
 		WHERE
-		TOWNSHIP=#{TOWNSHIP}
+		township=#{TOWNSHIP}
 		AND
-		PERIOD=#{PERIOD}
+		period=#{PERIOD}
 		AND
-		DELETE_FLAG=0
+		delete_FLAG=0
 		AND
-		RENT_FLAG=0
+		rent_FLAG=0
 	</select>
 	<select id="getRoomListByAmountAndPeriod"
 		resultType="roomForRent.dto.renter.HouseDto"
@@ -171,14 +171,14 @@
 		FROM
 		TBL_HOUSE
 		WHERE
-		RENT &lt;= #{RENT}+50000
+		rent &lt;= #{RENT}+50000
 		AND
-		RENT &gt;= #{RENT}-50000
+		rent &gt;= #{RENT}-50000
 		AND
-		PERIOD=#{PERIOD}
+		period=#{PERIOD}
 		AND
-		DELETE_FLAG=0
+		delete_FLAG=0
 		AND
-		RENT_FLAG=0
+		rent_FLAG=0
 	</select>
 </mapper>

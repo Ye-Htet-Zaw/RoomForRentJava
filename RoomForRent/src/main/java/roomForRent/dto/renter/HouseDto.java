@@ -13,222 +13,224 @@ import java.util.Date;
 */
 public class HouseDto {
 
-	String HOUSE_ID;
-	String USER_ID;
-	String CATEGORY_ID;
-	String HOUSE_ADDRESS;
-	String TOWNSHIP;
-	Integer NO_OF_GUESTS;
-	Integer NO_OF_ROOM;
-	Integer NO_OF_BATH;
-	Integer NO_OF_TOILET;
-	Integer AREA;
-	Integer NO_OF_FLOOR;
-	Integer NO_OF_AIRCON;
-	Integer WIFI;
-	String PHONE_ONE;
-	String PHONE_TWO;
-	Date AVAILABLE_DATE;
-	Integer RENT;
-	Integer DEPOSIT;
-	String LONGITUDE;
-	String LATITUDE;
-	Date EXPIRED_DATE;
-	String RECOMMENTED_POINTS;
-	String CONTRACT_RULE;
-	Integer PERIOD;
-	Integer RENT_FLAG;
-	Integer DELETE_FLAG;
-	Timestamp DELETE_DATETIME;
-	String CREATOR_ID;
-	Timestamp CREATE_DATETIME;
-	String UPDATOR_ID;
-	Timestamp UPDATE_DATETIME;
-	public String getHOUSE_ID() {
-		return HOUSE_ID;
+	String house_ID;
+	String user_ID;
+	String category_ID;
+	String house_ADDRESS;
+	String township;
+    Integer no_OF_GUESTS;
+    Integer no_OF_ROOM;
+    Integer no_OF_BATH;
+    Integer no_OF_TOILET;
+    Integer area;
+    Integer no_OF_FLOOR;
+    Integer no_OF_AIRCON;
+    Integer wifi;
+    String phone_ONE;
+    String phone_TWO;
+    Date available_DATE;
+    Integer rent;
+    Integer deposit;
+    String longitude;
+    String latitude;
+    Date expired_DATE;
+    String recommented_POINTS;
+    String contract_RULE;
+    Integer period;
+    Integer rent_FLAG;
+    Integer delete_FLAG;
+    Timestamp delete_DATETIME;
+    String creator_ID;
+    Timestamp create_DATETIME;
+    String updator_ID;
+    Timestamp update_DATETIME;
+    
+	public String getHouse_ID() {
+		return house_ID;
 	}
-	public void setHOUSE_ID(String hOUSE_ID) {
-		HOUSE_ID = hOUSE_ID;
+	public void setHouse_ID(String house_ID) {
+		this.house_ID = house_ID;
 	}
-	public String getUSER_ID() {
-		return USER_ID;
+	public String getUser_ID() {
+		return user_ID;
 	}
-	public void setUSER_ID(String uSER_ID) {
-		USER_ID = uSER_ID;
+	public void setUser_ID(String user_ID) {
+		this.user_ID = user_ID;
 	}
-	public String getCATEGORY_ID() {
-		return CATEGORY_ID;
+	public String getCategory_ID() {
+		return category_ID;
 	}
-	public void setCATEGORY_ID(String cATEGORY_ID) {
-		CATEGORY_ID = cATEGORY_ID;
+	public void setCategory_ID(String category_ID) {
+		this.category_ID = category_ID;
 	}
-	public String getHOUSE_ADDRESS() {
-		return HOUSE_ADDRESS;
+	public String getHouse_ADDRESS() {
+		return house_ADDRESS;
 	}
-	public void setHOUSE_ADDRESS(String hOUSE_ADDRESS) {
-		HOUSE_ADDRESS = hOUSE_ADDRESS;
+	public void setHouse_ADDRESS(String house_ADDRESS) {
+		this.house_ADDRESS = house_ADDRESS;
 	}
-	public String getTOWNSHIP() {
-		return TOWNSHIP;
+	public String getTownship() {
+		return township;
 	}
-	public void setTOWNSHIP(String tOWNSHIP) {
-		TOWNSHIP = tOWNSHIP;
+	public void setTownship(String township) {
+		this.township = township;
 	}
-	public Integer getNO_OF_GUESTS() {
-		return NO_OF_GUESTS;
+	public Integer getNo_OF_GUESTS() {
+		return no_OF_GUESTS;
 	}
-	public void setNO_OF_GUESTS(Integer nO_OF_GUESTS) {
-		NO_OF_GUESTS = nO_OF_GUESTS;
+	public void setNo_OF_GUESTS(Integer no_OF_GUESTS) {
+		this.no_OF_GUESTS = no_OF_GUESTS;
 	}
-	public Integer getNO_OF_ROOM() {
-		return NO_OF_ROOM;
+	public Integer getNo_OF_ROOM() {
+		return no_OF_ROOM;
 	}
-	public void setNO_OF_ROOM(Integer nO_OF_ROOM) {
-		NO_OF_ROOM = nO_OF_ROOM;
+	public void setNo_OF_ROOM(Integer no_OF_ROOM) {
+		this.no_OF_ROOM = no_OF_ROOM;
 	}
-	public Integer getNO_OF_BATH() {
-		return NO_OF_BATH;
+	public Integer getNo_OF_BATH() {
+		return no_OF_BATH;
 	}
-	public void setNO_OF_BATH(Integer nO_OF_BATH) {
-		NO_OF_BATH = nO_OF_BATH;
+	public void setNo_OF_BATH(Integer no_OF_BATH) {
+		this.no_OF_BATH = no_OF_BATH;
 	}
-	public Integer getNO_OF_TOILET() {
-		return NO_OF_TOILET;
+	public Integer getNo_OF_TOILET() {
+		return no_OF_TOILET;
 	}
-	public void setNO_OF_TOILET(Integer nO_OF_TOILET) {
-		NO_OF_TOILET = nO_OF_TOILET;
+	public void setNo_OF_TOILET(Integer no_OF_TOILET) {
+		this.no_OF_TOILET = no_OF_TOILET;
 	}
-	public Integer getAREA() {
-		return AREA;
+	public Integer getArea() {
+		return area;
 	}
-	public void setAREA(Integer aREA) {
-		AREA = aREA;
+	public void setArea(Integer area) {
+		this.area = area;
 	}
-	public Integer getNO_OF_FLOOR() {
-		return NO_OF_FLOOR;
+	public Integer getNo_OF_FLOOR() {
+		return no_OF_FLOOR;
 	}
-	public void setNO_OF_FLOOR(Integer nO_OF_FLOOR) {
-		NO_OF_FLOOR = nO_OF_FLOOR;
+	public void setNo_OF_FLOOR(Integer no_OF_FLOOR) {
+		this.no_OF_FLOOR = no_OF_FLOOR;
 	}
-	public Integer getNO_OF_AIRCON() {
-		return NO_OF_AIRCON;
+	public Integer getNo_OF_AIRCON() {
+		return no_OF_AIRCON;
 	}
-	public void setNO_OF_AIRCON(Integer nO_OF_AIRCON) {
-		NO_OF_AIRCON = nO_OF_AIRCON;
+	public void setNo_OF_AIRCON(Integer no_OF_AIRCON) {
+		this.no_OF_AIRCON = no_OF_AIRCON;
 	}
-	public Integer getWIFI() {
-		return WIFI;
+	public Integer getWifi() {
+		return wifi;
 	}
-	public void setWIFI(Integer wIFI) {
-		WIFI = wIFI;
+	public void setWifi(Integer wifi) {
+		this.wifi = wifi;
 	}
-	public String getPHONE_ONE() {
-		return PHONE_ONE;
+	public String getPhone_ONE() {
+		return phone_ONE;
 	}
-	public void setPHONE_ONE(String pHONE_ONE) {
-		PHONE_ONE = pHONE_ONE;
+	public void setPhone_ONE(String phone_ONE) {
+		this.phone_ONE = phone_ONE;
 	}
-	public String getPHONE_TWO() {
-		return PHONE_TWO;
+	public String getPhone_TWO() {
+		return phone_TWO;
 	}
-	public void setPHONE_TWO(String pHONE_TWO) {
-		PHONE_TWO = pHONE_TWO;
+	public void setPhone_TWO(String phone_TWO) {
+		this.phone_TWO = phone_TWO;
 	}
-	public Date getAVAILABLE_DATE() {
-		return AVAILABLE_DATE;
+	public Date getAvailable_DATE() {
+		return available_DATE;
 	}
-	public void setAVAILABLE_DATE(Date aVAILABLE_DATE) {
-		AVAILABLE_DATE = aVAILABLE_DATE;
+	public void setAvailable_DATE(Date available_DATE) {
+		this.available_DATE = available_DATE;
 	}
-	public Integer getRENT() {
-		return RENT;
+	public Integer getRent() {
+		return rent;
 	}
-	public void setRENT(Integer rENT) {
-		RENT = rENT;
+	public void setRent(Integer rent) {
+		this.rent = rent;
 	}
-	public Integer getDEPOSIT() {
-		return DEPOSIT;
+	public Integer getDeposit() {
+		return deposit;
 	}
-	public void setDEPOSIT(Integer dEPOSIT) {
-		DEPOSIT = dEPOSIT;
+	public void setDeposit(Integer deposit) {
+		this.deposit = deposit;
 	}
-	public String getLONGITUDE() {
-		return LONGITUDE;
+	public String getLongitude() {
+		return longitude;
 	}
-	public void setLONGITUDE(String lONGITUDE) {
-		LONGITUDE = lONGITUDE;
+	public void setLongitude(String longitude) {
+		this.longitude = longitude;
 	}
-	public String getLATITUDE() {
-		return LATITUDE;
+	public String getLatitude() {
+		return latitude;
 	}
-	public void setLATITUDE(String lATITUDE) {
-		LATITUDE = lATITUDE;
+	public void setLatitude(String latitude) {
+		this.latitude = latitude;
 	}
-	public Date getEXPIRED_DATE() {
-		return EXPIRED_DATE;
+	public Date getExpired_DATE() {
+		return expired_DATE;
 	}
-	public void setEXPIRED_DATE(Date eXPIRED_DATE) {
-		EXPIRED_DATE = eXPIRED_DATE;
+	public void setExpired_DATE(Date expired_DATE) {
+		this.expired_DATE = expired_DATE;
 	}
-	public String getRECOMMENTED_POINTS() {
-		return RECOMMENTED_POINTS;
+	public String getRecommented_POINTS() {
+		return recommented_POINTS;
 	}
-	public void setRECOMMENTED_POINTS(String rECOMMENTED_POINTS) {
-		RECOMMENTED_POINTS = rECOMMENTED_POINTS;
+	public void setRecommented_POINTS(String recommented_POINTS) {
+		this.recommented_POINTS = recommented_POINTS;
 	}
-	public String getCONTRACT_RULE() {
-		return CONTRACT_RULE;
+	public String getContract_RULE() {
+		return contract_RULE;
 	}
-	public void setCONTRACT_RULE(String cONTRACT_RULE) {
-		CONTRACT_RULE = cONTRACT_RULE;
+	public void setContract_RULE(String contract_RULE) {
+		this.contract_RULE = contract_RULE;
 	}
-	public Integer getPERIOD() {
-		return PERIOD;
+	public Integer getPeriod() {
+		return period;
 	}
-	public void setPERIOD(Integer pERIOD) {
-		PERIOD = pERIOD;
+	public void setPeriod(Integer period) {
+		this.period = period;
 	}
-	public Integer getRENT_FLAG() {
-		return RENT_FLAG;
+	public Integer getRent_FLAG() {
+		return rent_FLAG;
 	}
-	public void setRENT_FLAG(Integer rENT_FLAG) {
-		RENT_FLAG = rENT_FLAG;
+	public void setRent_FLAG(Integer rent_FLAG) {
+		this.rent_FLAG = rent_FLAG;
 	}
-	public Integer getDELETE_FLAG() {
-		return DELETE_FLAG;
+	public Integer getDelete_FLAG() {
+		return delete_FLAG;
 	}
-	public void setDELETE_FLAG(Integer dELETE_FLAG) {
-		DELETE_FLAG = dELETE_FLAG;
+	public void setDelete_FLAG(Integer delete_FLAG) {
+		this.delete_FLAG = delete_FLAG;
 	}
-	public Timestamp getDELETE_DATETIME() {
-		return DELETE_DATETIME;
+	public Timestamp getDelete_DATETIME() {
+		return delete_DATETIME;
 	}
-	public void setDELETE_DATETIME(Timestamp dELETE_DATETIME) {
-		DELETE_DATETIME = dELETE_DATETIME;
+	public void setDelete_DATETIME(Timestamp delete_DATETIME) {
+		this.delete_DATETIME = delete_DATETIME;
 	}
-	public String getCREATOR_ID() {
-		return CREATOR_ID;
+	public String getCreator_ID() {
+		return creator_ID;
 	}
-	public void setCREATOR_ID(String cREATOR_ID) {
-		CREATOR_ID = cREATOR_ID;
+	public void setCreator_ID(String creator_ID) {
+		this.creator_ID = creator_ID;
 	}
-	public Timestamp getCREATE_DATETIME() {
-		return CREATE_DATETIME;
+	public Timestamp getCreate_DATETIME() {
+		return create_DATETIME;
 	}
-	public void setCREATE_DATETIME(Timestamp cREATE_DATETIME) {
-		CREATE_DATETIME = cREATE_DATETIME;
+	public void setCreate_DATETIME(Timestamp create_DATETIME) {
+		this.create_DATETIME = create_DATETIME;
 	}
-	public String getUPDATOR_ID() {
-		return UPDATOR_ID;
+	public String getUpdator_ID() {
+		return updator_ID;
 	}
-	public void setUPDATOR_ID(String uPDATOR_ID) {
-		UPDATOR_ID = uPDATOR_ID;
+	public void setUpdator_ID(String updator_ID) {
+		this.updator_ID = updator_ID;
 	}
-	public Timestamp getUPDATE_DATETIME() {
-		return UPDATE_DATETIME;
+	public Timestamp getUpdate_DATETIME() {
+		return update_DATETIME;
 	}
-	public void setUPDATE_DATETIME(Timestamp uPDATE_DATETIME) {
-		UPDATE_DATETIME = uPDATE_DATETIME;
+	public void setUpdate_DATETIME(Timestamp update_DATETIME) {
+		this.update_DATETIME = update_DATETIME;
 	}
-	
+    
+    
 }
