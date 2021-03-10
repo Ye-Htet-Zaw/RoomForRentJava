@@ -3,9 +3,13 @@ package roomForRent.controller.owner;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import roomForRent.dto.owner.UserDto;
 import roomForRent.service.owner.UserService;
+
 
 /**
 *UserController
@@ -27,4 +31,12 @@ public class UserController {
 		return userService.getUserInfo(user_id);
 		
 	}
+	
+	@PutMapping("/updateUserInfo")
+	public void updateUserInfo(@RequestBody UserDto userDto) {
+		 userService.updateUserInfo(userDto);
+		
+	}
+	
+	
 }

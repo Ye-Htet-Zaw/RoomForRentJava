@@ -20,4 +20,19 @@
            delete_flag=0          
         
     </select>  
+    
+    <update id="updateUserInfo" parameterType="roomForRent.dto.owner.UserDto">
+	
+	  UPDATE
+	  	TBL_USER
+	  SET 
+	    user_name=#{user_name,jdbcType=VARCHAR},
+        user_gender=#{user_gender,jdbcType=VARCHAR},        
+        updator_id=#{updator_id,jdbcType=VARCHAR},
+        user_dob=#{user_dob,jdbcType=DATE},
+        update_datetime=#{update_datetime,jdbcType=DATE}
+      WHERE
+      	user_id=#{user_id,jdbcType=VARCHAR}
+	  
+	</update>
 </mapper>

@@ -16,4 +16,6 @@ public interface UserMapper {
 
 	UserDto getUserInfo(String user_id);
 
+	void updateUserInfo(UserDto userDto);
+
 }
