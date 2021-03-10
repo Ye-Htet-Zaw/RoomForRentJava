@@ -1,3 +1,10 @@
+/**
+*ChangePasswordController
+*
+* 2021/03/10 NTTT Create New
+*
+* For ChangePassword
+*/
 package roomForRent.controller.owner;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;

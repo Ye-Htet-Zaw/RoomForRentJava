@@ -1,9 +1,3 @@
-package roomForRent.mapper.owner;
-
-import org.apache.ibatis.annotations.Mapper;
-
-import roomForRent.dto.owner.LoginDto;
-
 /**
  * UserLoginMapper
  *
@@ -11,6 +5,13 @@ import roomForRent.dto.owner.LoginDto;
  *
  * For Login User
  */
+package roomForRent.mapper.owner;
+
+import org.apache.ibatis.annotations.Mapper;
+
+import roomForRent.dto.owner.LoginDto;
+
+
 @Mapper
 public interface UserLoginMapper {
 

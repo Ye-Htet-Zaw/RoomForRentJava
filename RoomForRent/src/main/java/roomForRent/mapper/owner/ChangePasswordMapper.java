@@ -1,3 +1,10 @@
+/**
+*ChangePasswordMapper
+*
+* 2021/03/10 NTTT Create New
+*
+* For ChangePassword
+*/
 package roomForRent.mapper.owner;
 
 import org.apache.ibatis.annotations.Mapper;

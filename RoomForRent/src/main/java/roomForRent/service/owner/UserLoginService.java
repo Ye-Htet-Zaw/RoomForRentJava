@@ -1,10 +1,3 @@
-package roomForRent.service.owner;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
-import roomForRent.dto.owner.LoginDto;
-import roomForRent.mapper.owner.UserLoginMapper;
 /**
 *UserLoginService
 *
@@ -12,6 +5,14 @@ import roomForRent.mapper.owner.UserLoginMapper;
 *
 * For Login User
 */
+package roomForRent.service.owner;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import roomForRent.dto.owner.LoginDto;
+import roomForRent.mapper.owner.UserLoginMapper;
+
 @Service
 public class UserLoginService {
 	
