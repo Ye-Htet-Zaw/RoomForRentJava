@@ -1,3 +1,11 @@
+/**
+*
+* HouseListController
+*
+* 2021/03/08 HNT Create New
+*
+* house list
+*/
 package roomForRent.controller.renter;
 
 import java.util.List;
@@ -10,21 +18,15 @@ import roomForRent.dto.renter.HouseListDto;
 import roomForRent.service.renter.HouseListService;
 
 
-/**
-*
-*  HouseListController
-*
-* 2021/03/08 HNT Create New
-*
-* house list
-*/
-
 @RestController
 public class HouseListController {
 
 	@Autowired
 	HouseListService houseListService;
 
+	/**
+	 * @return houseList
+	 */
 	@GetMapping("/houseLists")
 	public List<HouseListDto> getHouseList() {	
 		List<HouseListDto> houseList = houseListService.getHouseList();
