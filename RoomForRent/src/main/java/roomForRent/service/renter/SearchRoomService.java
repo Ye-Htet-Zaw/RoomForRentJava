@@ -86,5 +86,9 @@ public class SearchRoomService {
 	public List<HouseDto> getRoomListByAddressAndAmountAndPeriod(SearchParameterDto paramDto) {
 		return searchRoomMapper.getRoomListByAddressAndAmountAndPeriod(paramDto);
 	}
+	
+	public List<HouseDto> getRoomListByAll(SearchParameterDto paramDto) {
+		return searchRoomMapper.getRoomListByAll(paramDto);
+	}
 
 }

@@ -172,4 +172,21 @@ public class SearchRoomController {
 			paramDto.setPERIOD(period);
 			return searchRoomService.getRoomListByAddressAndAmountAndPeriod(paramDto);
 		}
+		
+		//Search by all
+		@GetMapping("/getRoomListByAll/{CATEGORY_NAME}&{TOWNSHIP}&{RENT}&{PERIOD}")
+		private List<HouseDto> getRoomListByAll(@PathVariable(value = "CATEGORY_NAME")String categoryName,
+				@PathVariable(value = "TOWNSHIP")String townShip,
+				@PathVariable(value = "RENT")Integer rent,
+				@PathVariable(value = "PERIOD")Integer period) {
+			String categoryId = searchRoomService.getCategoryId(categoryName);
+			SearchParameterDto paramDto = new SearchParameterDto();
+			paramDto.setCATEGORY_ID(categoryId);
+			paramDto.setTOWNSHIP(townShip);
+			paramDto.setRENT(rent);
+			paramDto.setPERIOD(period);
+			return searchRoomService.getRoomListByAll(paramDto);
+			
+		}
+		
 }
