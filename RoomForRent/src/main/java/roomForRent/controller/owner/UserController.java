@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+
 import roomForRent.dto.owner.UserDto;
 import roomForRent.service.owner.UserService;
 
@@ -38,5 +40,10 @@ public class UserController {
 		
 	}
 	
+	 public void addResourceHandlers(ResourceHandlerRegistry registry) {
+	     registry.addResourceHandler("/image/user**")
+	     .addResourceLocations("classpath:/static/","classpath:/image/user")
+	     .setCachePeriod(0);
+	 }
 	
 }
