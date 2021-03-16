@@ -8,7 +8,10 @@
 */
 package roomForRent.dto.renter;
 
+import java.util.List;
+
 public class HouseDetailDto {
+	private List<String> house_image;
 	private String house_address;
 	private int no_of_guests;
 	private int no_of_room;
@@ -29,6 +32,12 @@ public class HouseDetailDto {
 	private String contract_rule;
 	private String period;
 	
+	public List<String> getHouse_image() {
+		return house_image;
+	}
+	public void setHouse_image(List<String> house_image) {
+		this.house_image = house_image;
+	}
 	public String getHouse_address() {
 		return house_address;
 	}
