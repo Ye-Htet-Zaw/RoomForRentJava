@@ -15,6 +15,8 @@ public interface ChangePasswordMapper {
 
 	LoginDto getRoomWithId(String user_id);
 
-	void updatepassword(LoginDto dto);
+	void updatePassword(LoginDto dto);
+
+	String getPassword(String user_id);
 
 }

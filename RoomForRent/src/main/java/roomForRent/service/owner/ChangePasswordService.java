@@ -18,13 +18,19 @@ public class ChangePasswordService {
 
 	@Autowired
 	ChangePasswordMapper changePasswordMapper;
+	
+	
 	public LoginDto getRoomWithId(String user_id) {
 		// TODO Auto-generated method stub
 		return changePasswordMapper.getRoomWithId(user_id);
 	}
-	public void updatepassword(LoginDto dto) {
+	public void updatePassword(LoginDto dto) {
 		// TODO Auto-generated method stub
-		changePasswordMapper.updatepassword(dto);
+		changePasswordMapper.updatePassword(dto);
+	}
+	public String getPassword(String user_id) {
+		// TODO Auto-generated method stub
+		return changePasswordMapper.getPassword(user_id);
 	}
 
 }
