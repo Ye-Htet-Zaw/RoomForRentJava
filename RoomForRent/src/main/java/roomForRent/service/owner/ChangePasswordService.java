@@ -3,7 +3,7 @@
 *
 * 2021/03/10 NTTT Create New
 *
-* For ChangePassword
+* For Update Password
 */
 package roomForRent.service.owner;
 
@@ -19,15 +19,28 @@ public class ChangePasswordService {
 	@Autowired
 	ChangePasswordMapper changePasswordMapper;
 	
-	
+	/**
+	 * Retrieve userId
+	 * @return userId
+	 */
 	public LoginDto getRoomWithId(String user_id) {
 		// TODO Auto-generated method stub
 		return changePasswordMapper.getRoomWithId(user_id);
 	}
+	
+	/**
+	 * Update Password from DB
+	 * @return LoginDto
+	 */
 	public void updatePassword(LoginDto dto) {
 		// TODO Auto-generated method stub
 		changePasswordMapper.updatePassword(dto);
 	}
+	
+	/**
+	 * Retrieve Password from DB
+	 * @return userId
+	 */
 	public String getPassword(String user_id) {
 		// TODO Auto-generated method stub
 		return changePasswordMapper.getPassword(user_id);

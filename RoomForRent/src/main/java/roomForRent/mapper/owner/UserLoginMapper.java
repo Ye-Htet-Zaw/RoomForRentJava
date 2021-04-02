@@ -15,6 +15,10 @@ import roomForRent.dto.owner.LoginDto;
 @Mapper
 public interface UserLoginMapper {
 
+	/**
+	 * Retrieve Email & Password
+	 * @return loginDto
+	 */
 	LoginDto getUserWithEmailAndPassword(LoginDto loginDto);
 
 }

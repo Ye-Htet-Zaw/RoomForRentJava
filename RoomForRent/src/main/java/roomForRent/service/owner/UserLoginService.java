@@ -19,11 +19,10 @@ public class UserLoginService {
 	@Autowired
 	UserLoginMapper userLoginMapper;
 
-	/*public UserDto getUserWithEmailAndPassword(LoginDto loginDto) {
-		
-		return userLoginMapper.getUserWithEmailAndPassword(loginDto);
-	}*/
-
+	/**
+	 * Retrieve Email & Password
+	 * @return loginDto
+	 */
 	public LoginDto getUserWithEmailAndPassword(LoginDto loginDto) {
 		// TODO Auto-generated method stub
 		return userLoginMapper.getUserWithEmailAndPassword(loginDto);

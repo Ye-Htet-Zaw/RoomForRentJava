@@ -20,6 +20,10 @@ public class UserLoginController {
 	@Autowired
 	UserLoginService  userLoginService;
 	
+	/**
+	 * Retrieve Email & Password
+	 * @return loginDto
+	 */
 	@GetMapping("/getUserWithEmailAndPassword/{user_email}&{password}")
 	public LoginDto getUserWithEmailAndPassword(@PathVariable(value = "user_email") String user_email,
 			@PathVariable(value = "password") String password) {
