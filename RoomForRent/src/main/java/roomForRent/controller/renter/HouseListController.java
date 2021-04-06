@@ -35,7 +35,7 @@ public class HouseListController {
             String id = houseList.get(i).getHouse_id();
             ArrayList<String> images = new ArrayList<>();
             for(int j = 1; j<=10; j++) {
-            	images.add("http://192.168.0.127:9090/image/house/"+id+"/"+j+".jpg");
+            	images.add("http://192.168.1.13:9090/image/house/"+id+"/"+j+".jpg");
             }
 		
 		}
