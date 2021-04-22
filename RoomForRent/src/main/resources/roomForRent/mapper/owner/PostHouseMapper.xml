@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="roomForRent.mapper.owner.PostHouseMapper">
+
+	<insert id="createHouse"
+		parameterType="roomForRent.dto.owner.HouseDto">
+		INSERT INTO
+		TBL_HOUSE (HOUSE_ID, USER_ID,
+		CATEGORY_ID,HOUSE_ADDRESS,TOWNSHIP,
+		NO_OF_GUESTS,NO_OF_ROOM,NO_OF_BATH,
+		NO_OF_TOILET,AREA,NO_OF_FLOOR,
+		NO_OF_AIRCON,WIFI,PHONE_ONE,
+		PHONE_TWO,AVAILABLE_DATE,RENT,
+		DEPOSIT,LONGITUDE,LATITUDE,
+		EXPIRED_DATE,RECOMMENTED_POINTS,CONTRACT_RULE,
+		PERIOD,RENT_FLAG,DELETE_FLAG,
+		CREATOR_ID, CREATE_DATETIME)
+		VALUES
+		(#{house_ID},
+		#{user_ID},
+		#{category_ID},
+		#{house_ADDRESS},
+		#{township},
+		#{no_OF_GUESTS},
+		#{no_OF_ROOM},
+		#{no_OF_BATH},
+		#{no_OF_TOILET},
+		#{area},
+		#{no_OF_FLOOR},
+		#{no_OF_AIRCON},
+		#{wifi},
+		#{phone_ONE},
+		#{phone_TWO},
+		#{available_DATE},
+		#{rent},
+		#{deposit},
+		#{longitude},
+		#{latitude},
+		#{expired_DATE},
+		#{recommented_POINTS},
+		#{contract_RULE},
+		#{period},
+		#{rent_FLAG},
+		#{delete_FLAG},
+		#{creator_id},
+		#{create_dateTime})
+	</insert>
+</mapper>
