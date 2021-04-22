@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import roomForRent.dto.renter.FavouriteDto;
+import roomForRent.dto.renter.HouseDto;
 import roomForRent.mapper.renter.FavouriteMapper;
 
 @Service
@@ -29,6 +30,10 @@ public class FavouriteService {
 
 	public FavouriteDto getFavouriteId(FavouriteDto dto) {
 		return favouriteMapper.getFavouriteId(dto);
+	}
+	
+	public List<HouseDto> getFavouritHouseList() {
+		return favouriteMapper.getFavouritHouseList();
 	}
 
 }

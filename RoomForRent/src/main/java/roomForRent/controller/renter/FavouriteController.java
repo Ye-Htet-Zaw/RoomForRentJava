@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import roomForRent.dto.renter.FavouriteDto;
+import roomForRent.dto.renter.HouseDto;
 import roomForRent.service.renter.FavouriteService;
 
 @RestController
@@ -43,5 +44,10 @@ public class FavouriteController {
 		dto.setUser_id(userId);
 		dto.setHouse_id(houseId);
 		return favouriteService.getFavouriteId(dto);
+	}
+	
+	@GetMapping("/getFavouritHouseList")
+	private List<HouseDto> getFavouritHouseList() {
+		return favouriteService.getFavouritHouseList();
 	}
 }

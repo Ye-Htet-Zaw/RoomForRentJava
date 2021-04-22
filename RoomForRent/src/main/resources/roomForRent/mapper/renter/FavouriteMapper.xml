@@ -41,4 +41,10 @@
 		AND
 		house_id=#{house_id}
 	</select>
+	<select id="getFavouritHouseList"
+		resultType="roomForRent.dto.renter.HouseDto">
+		SELECT *
+		FROM TBL_HOUSE
+		INNER JOIN TBL_FAVOURITE ON TBL_HOUSE.house_id=TBL_FAVOURITE.house_id
+	</select>
 </mapper>

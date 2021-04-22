@@ -7,6 +7,7 @@ import javax.validation.Valid;
 import org.apache.ibatis.annotations.Mapper;
 
 import roomForRent.dto.renter.FavouriteDto;
+import roomForRent.dto.renter.HouseDto;
 
 @Mapper
 public interface FavouriteMapper {
@@ -18,4 +19,6 @@ public interface FavouriteMapper {
 	void deleteFavouriteWithId(String favourite_id);
 
 	FavouriteDto getFavouriteId(FavouriteDto dto);
+	
+	List<HouseDto> getFavouritHouseList();	
 }
