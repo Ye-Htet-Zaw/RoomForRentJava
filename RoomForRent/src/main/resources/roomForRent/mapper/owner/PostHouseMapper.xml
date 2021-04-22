@@ -3,7 +3,7 @@
 <mapper namespace="roomForRent.mapper.owner.PostHouseMapper">
 
 	<insert id="createHouse"
-		parameterType="roomForRent.dto.owner.HouseDto">
+		parameterType="roomForRent.dto.renter.HouseDto">
 		INSERT INTO
 		TBL_HOUSE (HOUSE_ID, USER_ID,
 		CATEGORY_ID,HOUSE_ADDRESS,TOWNSHIP,
