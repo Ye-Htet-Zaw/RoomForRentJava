@@ -47,4 +47,13 @@
 		FROM TBL_HOUSE
 		INNER JOIN TBL_FAVOURITE ON TBL_HOUSE.house_id=TBL_FAVOURITE.house_id
 	</select>
+	<delete id="deleteFavouriteWithUserAndHouseId"
+		parameterType="roomForRent.dto.renter.FavouriteDto">
+		DELETE FROM
+		TBL_FAVOURITE
+		WHERE
+		HOUSE_ID=#{house_id}
+		AND
+		USER_ID=#{user_id}
+	</delete>
 </mapper>

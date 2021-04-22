@@ -50,4 +50,14 @@ public class FavouriteController {
 	private List<HouseDto> getFavouritHouseList() {
 		return favouriteService.getFavouritHouseList();
 	}
+	
+	@DeleteMapping("/deleteFavouriteWithUserAndHouseId/{USER_ID}&{HOUSE_ID}")
+	public List<HouseDto> deleteFavouriteWithUserAndHouseId(@PathVariable(value = "USER_ID")String user_id,
+			@PathVariable(value = "HOUSE_ID") String house_id) {
+		FavouriteDto favouriteDto =new FavouriteDto();
+		favouriteDto.setUser_id(user_id);
+		favouriteDto.setHouse_id(house_id);
+		favouriteService.deleteFavouriteWithUserAndHouseId(favouriteDto);
+		return favouriteService.getFavouritHouseList();
+	}
 }

@@ -20,5 +20,7 @@ public interface FavouriteMapper {
 
 	FavouriteDto getFavouriteId(FavouriteDto dto);
 	
-	List<HouseDto> getFavouritHouseList();	
+	List<HouseDto> getFavouritHouseList();
+
+	void deleteFavouriteWithUserAndHouseId(FavouriteDto favouriteDto);	
 }

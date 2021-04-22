@@ -35,5 +35,9 @@ public class FavouriteService {
 	public List<HouseDto> getFavouritHouseList() {
 		return favouriteMapper.getFavouritHouseList();
 	}
+	
+	public void deleteFavouriteWithUserAndHouseId(FavouriteDto favouriteDto) {
+		favouriteMapper.deleteFavouriteWithUserAndHouseId(favouriteDto);
+	}
 
 }
