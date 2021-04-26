@@ -1,3 +1,11 @@
+/**
+*
+  FavouriteMapper
+*
+* 2021/04/20 KMMN Create New
+*
+* favourite house mapper
+*/
 package roomForRent.mapper.renter;
 
 import java.util.List;
