@@ -28,7 +28,7 @@ public class HouseDetailController {
 		HouseDetailDto houseDetailById = houseDetailService.getHouseDetailById(houseId);	
 		List<String> test = new ArrayList<>();
 		for(int j= 1; j<=10; j++) {	
-			test.add("http://192.168.1.13:9090/image/house/"+houseId+"/"+j+".jpg");		
+			test.add("http://192.168.100.4:9090/image/house/"+houseId+"/"+j+".jpg");		
 		}
 		houseDetailById.setHouse_image(test);
 		return houseDetailById;
