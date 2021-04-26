@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="roomForRent.mapper.renter.FavouriteMapper">
+<select id="getAllFavouriteListWithUserId"
+		resultType="roomForRent.dto.renter.FavouriteDto"
+		parameterType="String">
+		SELECT
+		*
+		FROM
+		TBL_FAVOURITE
+		WHERE
+		user_id=#{user_id}
+	</select>
+	<insert id="saveFavouriteInfo"
+		parameterType="roomForRent.dto.renter.FavouriteDto">
+		INSERT INTO
+		TBL_FAVOURITE (FAVOURITE_ID, USER_ID,
+		HOUSE_ID, CREATOR_ID, CREATE_DATETIME)
+		VALUES
+		(#{favourite_id},
+		#{user_id},
+		#{house_id},
+		#{creator_id},
+		#{create_dateTime})
+	</insert>
+	<delete id="deleteFavouriteWithId" parameterType="String">
+		DELETE FROM
+		TBL_FAVOURITE
+		WHERE 
+		FAVOURITE_ID=#{favourite_id}
+	</delete>
+	<select id="getFavouriteId"
+		resultType="roomForRent.dto.renter.FavouriteDto"
+		parameterType="roomForRent.dto.renter.FavouriteDto">
+		SELECT
+		*
+		FROM
+		TBL_FAVOURITE
+		WHERE
+		user_id=#{user_id}
+		AND
+		house_id=#{house_id}
+	</select>
+	<select id="getFavouritHouseList"
+		resultType="roomForRent.dto.renter.HouseDto">
+		SELECT *
+		FROM TBL_HOUSE
+		INNER JOIN TBL_FAVOURITE ON TBL_HOUSE.house_id=TBL_FAVOURITE.house_id
+	</select>
+	<delete id="deleteFavouriteWithUserAndHouseId"
+		parameterType="roomForRent.dto.renter.FavouriteDto">
+		DELETE FROM
+		TBL_FAVOURITE
+		WHERE
+		HOUSE_ID=#{house_id}
+		AND
+		USER_ID=#{user_id}
+	</delete>
+</mapper>
