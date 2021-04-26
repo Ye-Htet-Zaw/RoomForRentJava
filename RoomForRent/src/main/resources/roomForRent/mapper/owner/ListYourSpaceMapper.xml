@@ -4,11 +4,7 @@
 
 <select id="getHouseList" resultType="roomForRent.dto.renter.HouseListDto">
 		SELECT 
-			 HOUSE_ID
-			,USER_ID
-			,CATEGORY_ID
-			,HOUSE_ADDRESS
-			,RENT
+			*
 		FROM
 			TBL_HOUSE
 		WHERE
