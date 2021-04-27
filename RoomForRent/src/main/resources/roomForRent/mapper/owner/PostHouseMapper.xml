@@ -5,7 +5,7 @@
 	<insert id="createHouse"
 		parameterType="roomForRent.dto.renter.HouseDto">
 		INSERT INTO
-		TBL_HOUSE (HOUSE_ID, USER_ID,
+		TBL_HOUSE (HOUSE_ID,USER_ID,
 		CATEGORY_ID,HOUSE_ADDRESS,TOWNSHIP,
 		NO_OF_GUESTS,NO_OF_ROOM,NO_OF_BATH,
 		NO_OF_TOILET,AREA,NO_OF_FLOOR,
@@ -31,18 +31,18 @@
 		#{wifi},
 		#{phone_ONE},
 		#{phone_TWO},
-		#{available_DATE},
+		#{available_DATE,jdbcType=DATE},
 		#{rent},
 		#{deposit},
 		#{longitude},
 		#{latitude},
-		#{expired_DATE},
+		#{expired_DATE,jdbcType=DATE},
 		#{recommented_POINTS},
 		#{contract_RULE},
 		#{period},
 		#{rent_FLAG},
 		#{delete_FLAG},
-		#{creator_id},
-		#{create_dateTime})
+		#{creator_ID},
+		#{create_DATETIME})
 	</insert>
 </mapper>

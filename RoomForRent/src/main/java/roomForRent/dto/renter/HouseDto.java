@@ -3,6 +3,8 @@ package roomForRent.dto.renter;
 import java.sql.Timestamp;
 import java.util.Date;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 /**
 *
   HouseDto
@@ -28,21 +30,26 @@ public class HouseDto {
     Integer wifi;
     String phone_ONE;
     String phone_TWO;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
     Date available_DATE;
     Integer rent;
     Integer deposit;
     String longitude;
     String latitude;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     Date expired_DATE;
     String recommented_POINTS;
     String contract_RULE;
     Integer period;
     Integer rent_FLAG;
     Integer delete_FLAG;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     Timestamp delete_DATETIME;
     String creator_ID;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     Timestamp create_DATETIME;
     String updator_ID;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     Timestamp update_DATETIME;
     
 	public String getHouse_ID() {
