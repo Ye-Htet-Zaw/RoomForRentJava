@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="roomForRent.mapper.renter.IDCreatorMapper">
+<select id="getOneUserID" resultType="String">
+        SELECT
+            USER_ID
+        FROM
+            TBL_USER
+        WHERE
+            USER_ID= (SELECT MAX(USER_ID) FROM TBL_USER)
+    </select>
+    <select id="getOneHouseID" resultType="String">
+        SELECT
+            HOUSE_ID
+        FROM
+            TBL_HOUSE
+        WHERE
+            HOUSE_ID= (SELECT MAX(HOUSE_ID) FROM TBL_HOUSE)
+    </select>
+    <select id="getOneFavouriteID" resultType="String">
+        SELECT
+            FAVOURITE_ID
+        FROM
+            TBL_FAVOURITE
+        WHERE
+            FAVOURITE_ID= (SELECT MAX(FAVOURITE_ID) FROM TBL_FAVOURITE)
+    </select>
+</mapper>
