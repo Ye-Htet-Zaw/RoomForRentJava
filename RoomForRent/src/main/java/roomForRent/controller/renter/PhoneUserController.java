@@ -1,12 +1,17 @@
 package roomForRent.controller.renter;
 
+import java.util.List;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import roomForRent.dto.owner.UserDto;
+import roomForRent.dto.renter.PhoneDto;
 import roomForRent.service.renter.PhoneUserService;
 
 @RestController
@@ -29,5 +34,10 @@ public class PhoneUserController {
         	userDto.setUser_id("USE0000001");
         }
 		phoneUserService.savePhoneUser(userDto);
+	}
+	
+	@GetMapping("/getPhoneUserCount/{PHONE_ONE}")
+	public List<PhoneDto> getPhoneUserCount(@PathVariable(value = "PHONE_ONE")String phone_one) {
+		return phoneUserService.getPhoneUserCount(phone_one);	
 	}
 }
