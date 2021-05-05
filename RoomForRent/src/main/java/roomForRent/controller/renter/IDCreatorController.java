@@ -48,6 +48,8 @@ public class IDCreatorController {
         if (id != null) {   
             int maxId = Integer.parseInt(id.substring(3)) + 1;
             generatedID = idKey + String.format("%07d", maxId);
+        }else {
+        	generatedID = idKey+"0000001";
         }
 		return generatedID; 
 	}
