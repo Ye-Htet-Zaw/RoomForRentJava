@@ -27,6 +27,9 @@ public class FavouriteController {
 	@Autowired
 	FavouriteService favouriteService;
 	
+	@Autowired
+	IDCreatorController idCreatorController;
+	
 	@GetMapping("/getAllFavouriteListWithUserId/{USER_ID}")
 	private List<FavouriteDto> getAllFavouriteListWithUserId(@PathVariable(value = "USER_ID")String user_id) {
 		return favouriteService.getAllFavouriteListWithUserId(user_id);
@@ -34,6 +37,7 @@ public class FavouriteController {
 	
 	@PostMapping("/saveFavouriteInfo")
 	private List<FavouriteDto> saveFavouriteInfo(@Valid @RequestBody FavouriteDto favouriteDto) {
+		favouriteDto.setFavourite_id(idCreatorController.createId(favouriteDto.getFavourite_id()));
 		favouriteService.saveFavouriteInfo(favouriteDto);
 		return favouriteService.getAllFavouriteListWithUserId(favouriteDto.getUser_id());
 	}
