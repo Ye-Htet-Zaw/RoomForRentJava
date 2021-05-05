@@ -10,4 +10,6 @@ import roomForRent.dto.owner.UserDto;
 public interface PhoneUserMapper {
 
 	void savePhoneUser(@Valid UserDto userDto);
+
+	String getMaxUserId();
 }

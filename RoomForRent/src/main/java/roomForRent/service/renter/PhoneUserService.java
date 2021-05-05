@@ -18,4 +18,8 @@ public class PhoneUserService {
 		phoneUserMapper.savePhoneUser(userDto);
 	}
 
+	public String getMaxUserId() {
+		return phoneUserMapper.getMaxUserId();
+	}
+
 }
