@@ -25,9 +25,7 @@ public class PostHouseController {
 	
 	@PostMapping("/uploadImages")
     public void uploadFile(@RequestParam("file") MultipartFile file, String path) {
-		
 		postHouseService.storeFile(file,path);
-
 
     }
 	

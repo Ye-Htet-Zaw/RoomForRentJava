@@ -24,6 +24,12 @@ public class PostHouseService {
 	PostHouseMapper postHouseMapper;
 
 	private Path fileStorageLocation;
+	
+	public void createHouse(HouseDto houseDto) {
+		postHouseMapper.createHouse(houseDto);
+		
+	}
+	
 
     public void storeFile(MultipartFile file,String path) {
     	
@@ -67,9 +73,6 @@ public class PostHouseService {
 		return null;
     }
 	
-	public void createHouse(HouseDto houseDto) {
-		postHouseMapper.createHouse(houseDto);
-		
-	}
+	
 
 }
