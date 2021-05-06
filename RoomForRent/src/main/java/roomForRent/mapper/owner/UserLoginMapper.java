@@ -21,4 +21,10 @@ public interface UserLoginMapper {
 	 */
 	LoginDto getUserWithEmailAndPassword(LoginDto loginDto);
 
+	void createFbUser(LoginDto loginDto);
+
+	Integer getFacebookId(LoginDto loginDto);
+
+	LoginDto getUserId(String user_id);
+
 }
