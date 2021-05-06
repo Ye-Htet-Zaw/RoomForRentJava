@@ -24,7 +24,7 @@ public class ListYourSpaceController {
             String id = houseList.get(i).getHouse_ID();
             ArrayList<String> images = new ArrayList<>();
             for(int j = 1; j<=10; j++) {
-            	images.add("http://192.168.1.3:9090/image/house/"+id+"/"+j+".jpg");
+            	images.add("http://192.168.1.5:9090/image/house/"+id+"/"+j+".jpg");
             }
 		
 		}

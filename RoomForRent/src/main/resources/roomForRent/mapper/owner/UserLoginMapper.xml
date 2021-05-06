@@ -65,7 +65,7 @@
 	</insert>
 
 	<select id="getFacebookId"
-		resultType="roomForRent.dto.owner.LoginDto"
+		resultType="Integer"
 		parameterType="roomForRent.dto.owner.LoginDto">
 		
 		SELECT
