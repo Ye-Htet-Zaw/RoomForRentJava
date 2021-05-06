@@ -28,4 +28,19 @@ public class UserLoginService {
 		return userLoginMapper.getUserWithEmailAndPassword(loginDto);
 	}
 
+	public void createFbUser(LoginDto loginDto) {
+		userLoginMapper.createFbUser(loginDto);
+		
+	}
+
+	public Integer getFacebookId(LoginDto loginDto) {
+		// TODO Auto-generated method stub
+		return userLoginMapper.getFacebookId(loginDto);
+	}
+
+	public LoginDto getUserId(String user_id) {
+		// TODO Auto-generated method stub
+		return userLoginMapper.getUserId(user_id);
+	}
+
 }

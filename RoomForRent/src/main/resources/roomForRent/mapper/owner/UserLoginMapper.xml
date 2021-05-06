@@ -2,17 +2,97 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="roomForRent.mapper.owner.UserLoginMapper">
 
-<select id="getUserWithEmailAndPassword" resultType="roomForRent.dto.owner.LoginDto"
-        parameterType="roomForRent.dto.owner.LoginDto">
-        SELECT
-        *
-        FROM
-        TBL_USER
-        WHERE
-        user_email=#{user_email}
-        AND
-        password=#{password}
-        AND
-        user_position=1
-    </select>
-    </mapper>
+	<select id="getUserWithEmailAndPassword"
+		resultType="roomForRent.dto.owner.LoginDto"
+		parameterType="roomForRent.dto.owner.LoginDto">
+		
+		SELECT
+		*
+		FROM
+			TBL_USER
+		WHERE
+			user_email=#{user_email}
+		AND
+			password=#{password}
+		AND
+			user_position=1
+	
+	</select>
+
+	<insert id="createFbUser"
+		parameterType="roomForRent.dto.owner.LoginDto">
+
+		INSERT 
+		INTO
+			TBL_USER(
+					user_id,
+					user_name,
+					user_email,
+					facebook_id,
+					password,
+					phone_one,
+					phone_two,
+					user_address,
+					user_gender,
+					user_dob,
+					user_position,
+					delete_flag,
+					delete_datetime,
+					creator_id,
+					create_datetime,
+					updator_id,
+					update_datetime)
+		VALUES
+					(
+					#{user_id},
+					#{user_name},
+					#{user_email,jdbcType=VARCHAR},
+					#{facebook_id},
+					#{password},
+					#{phone_one},
+					#{phone_two},
+					#{user_address},
+					#{user_gender},
+					#{user_dob,},
+					#{user_position},
+					#{delete_flag},
+					#{delete_datetime},
+					#{creator_id},
+					#{create_datetime},
+					#{updator_id,jdbcType=VARCHAR},
+					#{update_datetime})
+	
+	</insert>
+
+	<select id="getFacebookId"
+		resultType="roomForRent.dto.owner.LoginDto"
+		parameterType="roomForRent.dto.owner.LoginDto">
+		
+		SELECT
+			COUNT(facebook_id)
+		FROM
+			TBL_USER
+		WHERE
+			facebook_id=#{facebook_id}
+		AND
+			user_position=0
+	
+	</select>
+
+	<select id="getUserId"
+		resultType="roomForRent.dto.owner.LoginDto" parameterType="String">
+		
+		SELECT
+			*
+		FROM
+			TBL_USER
+		WHERE
+			user_id=#{user_id}
+		AND
+			delete_flag=0
+		AND
+			user_position=0
+
+	</select>
+
+</mapper>

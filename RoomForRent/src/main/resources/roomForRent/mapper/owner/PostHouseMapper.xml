@@ -4,45 +4,74 @@
 
 	<insert id="createHouse"
 		parameterType="roomForRent.dto.renter.HouseDto">
-		INSERT INTO
-		TBL_HOUSE (HOUSE_ID,USER_ID,
-		CATEGORY_ID,HOUSE_ADDRESS,TOWNSHIP,
-		NO_OF_GUESTS,NO_OF_ROOM,NO_OF_BATH,
-		NO_OF_TOILET,AREA,NO_OF_FLOOR,
-		NO_OF_AIRCON,WIFI,PHONE_ONE,
-		PHONE_TWO,AVAILABLE_DATE,RENT,
-		DEPOSIT,LONGITUDE,LATITUDE,
-		EXPIRED_DATE,RECOMMENTED_POINTS,CONTRACT_RULE,
-		PERIOD,RENT_FLAG,DELETE_FLAG,
-		CREATOR_ID, CREATE_DATETIME)
-		VALUES
-		(#{house_ID},
-		#{user_ID},
-		#{category_ID},
-		#{house_ADDRESS},
-		#{township},
-		#{no_OF_GUESTS},
-		#{no_OF_ROOM},
-		#{no_OF_BATH},
-		#{no_OF_TOILET},
-		#{area},
-		#{no_OF_FLOOR},
-		#{no_OF_AIRCON},
-		#{wifi},
-		#{phone_ONE},
-		#{phone_TWO},
-		#{available_DATE,jdbcType=DATE},
-		#{rent},
-		#{deposit},
-		#{longitude},
-		#{latitude},
-		#{expired_DATE,jdbcType=DATE},
-		#{recommented_POINTS},
-		#{contract_RULE},
-		#{period},
-		#{rent_FLAG},
-		#{delete_FLAG},
-		#{creator_ID},
-		#{create_DATETIME})
+		INSERT INTO TBL_HOUSE(
+			HOUSE_ID,
+			USER_ID,
+			CATEGORY_ID,
+			HOUSE_ADDRESS,
+			TOWNSHIP,
+			NO_OF_GUESTS,
+			NO_OF_ROOM,
+			NO_OF_BATH,
+			NO_OF_TOILET,
+			AREA,
+			NO_OF_FLOOR,
+			NO_OF_AIRCON,
+			WIFI,
+			PHONE_ONE,
+			PHONE_TWO,
+			AVAILABLE_DATE,
+			RENT,
+			DEPOSIT,
+			LONGITUDE,
+			LATITUDE,
+			EXPIRED_DATE,
+			RECOMMENTED_POINTS,
+			CONTRACT_RULE,
+			PERIOD,
+			RENT_FLAG,
+			DELETE_FLAG,
+			CREATOR_ID,
+			CREATE_DATETIME)
+		VALUES(
+			#{house_ID},
+			#{user_ID},
+			#{category_ID},
+			#{house_ADDRESS},
+			#{township},
+			#{no_OF_GUESTS},
+			#{no_OF_ROOM},
+			#{no_OF_BATH},
+			#{no_OF_TOILET},
+			#{area},
+			#{no_OF_FLOOR},
+			#{no_OF_AIRCON},
+			#{wifi},
+			#{phone_ONE},
+			#{phone_TWO},
+			#{available_DATE,jdbcType=DATE},
+			#{rent},
+			#{deposit},
+			#{longitude},
+			#{latitude},
+			#{expired_DATE,jdbcType=DATE},
+			#{recommented_POINTS},
+			#{contract_RULE},
+			#{period},
+			#{rent_FLAG},
+			#{delete_FLAG},
+			#{creator_ID},
+			#{create_DATETIME})
 	</insert>
+	
+	<select id="getAllHouseListWithOwnerId"
+		resultType="roomForRent.dto.renter.HouseDto"
+		parameterType="String">
+		SELECT
+		*
+		FROM
+		TBL_HOUSE
+		WHERE
+		user_id=#{user_id}
+	</select>
 </mapper>
