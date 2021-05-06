@@ -1,6 +1,7 @@
 package roomForRent.controller.owner;
 
 import java.io.File;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -24,30 +25,39 @@ public class PostHouseController {
 	
 	String houseId;
 	
+	
+	
 	@PostMapping("/createHouse")
-	public void createHouse(@RequestBody HouseDto houseDto) {
-		houseDto.setHouse_ID(idCreatorController.createId(houseDto.getHouse_ID()));
+	public List<HouseDto> createHouse(@RequestBody HouseDto houseDto) {
 		houseId=idCreatorController.createId(houseDto.getHouse_ID());
+		houseDto.setHouse_ID(houseId);
 		postHouseService.createHouse(houseDto);
+		return postHouseService.getAllHouseListWithOwnerId(houseDto.getUser_ID());
 	}
 	
 	@PostMapping("/uploadImages")
-    public void uploadFile(@RequestParam("file") MultipartFile file, String path) {
-		postHouseService.storeFile(file,path);
+    public void uploadFile(@RequestParam("file") MultipartFile file, String path,Integer imagename) {
+		
+		postHouseService.storeFile(file,path,imagename);
 
     }
 	
+	
 	@PostMapping("/uploadMultipleFiles")
-	   public void uploadMultipleFiles(@RequestParam("imageupload") MultipartFile[] files) {
+	 public void uploadMultipleFiles(@RequestParam("imageupload") MultipartFile[] files) {
 		  String path = "src\\main\\resources\\static\\image\\house\\";
 		  File ss = new File(path+houseId);
+		  System.out.println(houseId);
 		  String filePath = null;
+		  Integer imagename=0;
 		  if(ss.mkdir()) {
 			  filePath="src\\main\\resources\\static\\image\\house\\"+ss.getName();
 		  }
-	         for (MultipartFile multipartFile : files) {
-				uploadFile(multipartFile,filePath);
-			}
+	      for (MultipartFile multipartFile : files) {
+	    	  imagename+=1;
+	    	  uploadFile(multipartFile,filePath,imagename);
+	      }
 	 }
+	
 
 }
