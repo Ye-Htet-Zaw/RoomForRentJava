@@ -1,3 +1,11 @@
+/**
+*
+* PostHouseController
+*
+* 2021/04/20 HNT Create New
+*
+* create house
+*/
 package roomForRent.controller.owner;
 
 import java.io.File;
@@ -25,8 +33,6 @@ public class PostHouseController {
 	
 	String houseId;
 	
-	
-	
 	@PostMapping("/createHouse")
 	public List<HouseDto> createHouse(@RequestBody HouseDto houseDto) {
 		houseId=idCreatorController.createId(houseDto.getHouse_ID());
@@ -41,8 +47,7 @@ public class PostHouseController {
 		postHouseService.storeFile(file,path,imagename);
 
     }
-	
-	
+		
 	@PostMapping("/uploadMultipleFiles")
 	 public void uploadMultipleFiles(@RequestParam("imageupload") MultipartFile[] files) {
 		  String path = "src\\main\\resources\\static\\image\\house\\";
