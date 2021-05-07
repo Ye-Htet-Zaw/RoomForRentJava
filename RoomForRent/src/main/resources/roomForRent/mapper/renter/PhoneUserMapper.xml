@@ -22,7 +22,7 @@
     </select>
     
 	<insert id="savePhoneUser"
-		parameterType="roomForRent.dto.owner.UserDto">
+		parameterType="roomForRent.dto.renter.PhoneDto">
 		INSERT INTO TBL_USER(
 			USER_ID,
 			PHONE_ONE,

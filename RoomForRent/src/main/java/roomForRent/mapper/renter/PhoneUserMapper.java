@@ -1,20 +1,15 @@
 package roomForRent.mapper.renter;
 
-import java.util.List;
-
 import javax.validation.Valid;
-
 import org.apache.ibatis.annotations.Mapper;
-
-import roomForRent.dto.owner.UserDto;
 import roomForRent.dto.renter.PhoneDto;
 
 @Mapper
 public interface PhoneUserMapper {
 
-	void savePhoneUser(@Valid UserDto userDto);
+	void savePhoneUser(@Valid PhoneDto phoneDto);
 
 	String getMaxUserId();
 
-	List<PhoneDto> getPhoneUserCount(String phone_one);
+	PhoneDto getPhoneUserCount(String phone_one);
 }
