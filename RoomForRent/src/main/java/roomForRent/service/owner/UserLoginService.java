@@ -7,10 +7,13 @@
 */
 package roomForRent.service.owner;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import roomForRent.dto.owner.LoginDto;
+import roomForRent.dto.renter.HouseDto;
 import roomForRent.mapper.owner.UserLoginMapper;
 
 @Service
@@ -38,9 +41,14 @@ public class UserLoginService {
 		return userLoginMapper.getFacebookId(loginDto);
 	}
 
-	public LoginDto getUserId(String user_id) {
+	public LoginDto getUserId(String facebook_id) {
 		// TODO Auto-generated method stub
-		return userLoginMapper.getUserId(user_id);
+		return userLoginMapper.getUserId(facebook_id);
+	}
+
+	public List<LoginDto> getUserAll() {
+		// TODO Auto-generated method stub
+		return userLoginMapper.getUserAll();
 	}
 
 }

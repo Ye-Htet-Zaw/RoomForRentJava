@@ -7,9 +7,12 @@
  */
 package roomForRent.mapper.owner;
 
+import java.util.List;
+
 import org.apache.ibatis.annotations.Mapper;
 
 import roomForRent.dto.owner.LoginDto;
+import roomForRent.dto.renter.HouseDto;
 
 
 @Mapper
@@ -25,6 +28,8 @@ public interface UserLoginMapper {
 
 	Integer getFacebookId(LoginDto loginDto);
 
-	LoginDto getUserId(String user_id);
+	LoginDto getUserId(String facebook_id);
+
+	List<LoginDto> getUserAll();
 
 }

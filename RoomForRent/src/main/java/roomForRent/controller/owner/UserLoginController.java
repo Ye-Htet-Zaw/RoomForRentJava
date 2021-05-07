@@ -7,14 +7,19 @@
 */
 package roomForRent.controller.owner;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import roomForRent.controller.renter.IDCreatorController;
 import roomForRent.dto.owner.LoginDto;
 import roomForRent.dto.owner.UserDto;
+import roomForRent.dto.renter.HouseDto;
 import roomForRent.service.owner.UserLoginService;
 
 @RestController
@@ -22,6 +27,15 @@ public class UserLoginController {
 
 	@Autowired
 	UserLoginService userLoginService;
+	
+	@Autowired
+	IDCreatorController idCreatorController;
+	
+	@GetMapping("/getUserAll")
+	public List<LoginDto> getUserAll() {
+		
+		return userLoginService.getUserAll();
+	}
 
 	/**
 	 * Retrieve Email & Password
@@ -38,10 +52,14 @@ public class UserLoginController {
 	}
 
 	@PostMapping("/createFacebookAccount")
-	public void createFbUser(@RequestBody LoginDto loginDto) {
+	public List<LoginDto> createFbUser(@RequestBody LoginDto loginDto) {
+		loginDto.setUser_id(idCreatorController.createId(loginDto.getUser_id()));
 		userLoginService.createFbUser(loginDto);
+		return userLoginService.getUserAll();
 	}
 
+	
+	
 	@GetMapping("/getFacebookId/{facebook_id}")
 	public Integer getFacebookId(@PathVariable(value = "facebook_id") String facebook_id) {
 		LoginDto loginDto = new LoginDto();
@@ -50,9 +68,11 @@ public class UserLoginController {
 	}
 
 	@GetMapping("/getUserId/{facebook_id}")
-	public LoginDto getUserId(@PathVariable(value = "user_id") String user_id) {
-		return userLoginService.getUserId(user_id);
+	public LoginDto getUserId(@PathVariable(value = "facebook_id") String facebook_id) {
+		return userLoginService.getUserId(facebook_id);
 
 	}
+	
+	
 
 }
