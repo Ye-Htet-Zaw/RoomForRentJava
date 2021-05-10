@@ -3,6 +3,7 @@
 <mapper namespace="roomForRent.mapper.owner.ListYourSpaceMapper">
 
 <select id="getHouseList" resultType="roomForRent.dto.renter.HouseDto">
+		
 		SELECT 
 			*
 		FROM
@@ -13,4 +14,5 @@
 			USER_ID=#{user_id}
 		
 </select>
+
 </mapper>

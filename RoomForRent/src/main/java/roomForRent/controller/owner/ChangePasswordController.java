@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import roomForRent.dto.owner.LoginDto;
 import roomForRent.service.owner.ChangePasswordService;
 
@@ -27,6 +26,7 @@ public class ChangePasswordController {
 	 */
 	@GetMapping("/getPassword/{user_id}")
 	public String getPassword(@PathVariable(value = "user_id") String user_id) {
+		
 		return changePasswordService.getPassword(user_id);
 	}
 	
@@ -39,6 +39,7 @@ public class ChangePasswordController {
 	public LoginDto updatepassword(@PathVariable(value = "user_id") String user_id,
 			@PathVariable(value = "password") String password)
 			 {
+		
 		LoginDto dto = changePasswordService.getRoomWithId(user_id);
 		dto.setPassword(password);
 		changePasswordService.updatePassword(dto);

@@ -4,20 +4,22 @@
 
 	<select id="getUserAll"
 		resultType="roomForRent.dto.owner.LoginDto">
+		
 		SELECT
-		*
+			*
 		FROM
-		TBL_USER
+			TBL_USER
 		WHERE
-		delete_FLAG=0
+			delete_FLAG=0
 	
 	</select>
+	
 	<select id="getUserWithEmailAndPassword"
 		resultType="roomForRent.dto.owner.LoginDto"
 		parameterType="roomForRent.dto.owner.LoginDto">
 		
 		SELECT
-		*
+			*
 		FROM
 			TBL_USER
 		WHERE
