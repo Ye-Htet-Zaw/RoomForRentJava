@@ -9,7 +9,6 @@ package roomForRent.service.owner;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import roomForRent.dto.owner.LoginDto;
 import roomForRent.mapper.owner.ChangePasswordMapper;
 
@@ -24,7 +23,7 @@ public class ChangePasswordService {
 	 * @return userId
 	 */
 	public LoginDto getRoomWithId(String user_id) {
-		// TODO Auto-generated method stub
+		
 		return changePasswordMapper.getRoomWithId(user_id);
 	}
 	
@@ -33,7 +32,7 @@ public class ChangePasswordService {
 	 * @return LoginDto
 	 */
 	public void updatePassword(LoginDto dto) {
-		// TODO Auto-generated method stub
+		
 		changePasswordMapper.updatePassword(dto);
 	}
 	
@@ -42,7 +41,7 @@ public class ChangePasswordService {
 	 * @return userId
 	 */
 	public String getPassword(String user_id) {
-		// TODO Auto-generated method stub
+		
 		return changePasswordMapper.getPassword(user_id);
 	}
 

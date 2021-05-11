@@ -51,6 +51,9 @@ public class IDCreatorController {
         }else {
         	generatedID = idKey+"0000001";
         }
+        else {
+        	generatedID = idKey+"0000001";
+        }
 		return generatedID; 
 	}
 	

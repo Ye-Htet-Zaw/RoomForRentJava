@@ -1,3 +1,11 @@
+/**
+*
+* PostHouseMapper
+*
+* 2021/04/20 HNT Create New
+*
+* create house mapper
+*/
 package roomForRent.mapper.owner;
 
 import java.util.List;

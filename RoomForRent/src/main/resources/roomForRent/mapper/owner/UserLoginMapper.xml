@@ -2,12 +2,24 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="roomForRent.mapper.owner.UserLoginMapper">
 
+	<select id="getUserAll"
+		resultType="roomForRent.dto.owner.LoginDto">
+		
+		SELECT
+			*
+		FROM
+			TBL_USER
+		WHERE
+			delete_FLAG=0
+	
+	</select>
+	
 	<select id="getUserWithEmailAndPassword"
 		resultType="roomForRent.dto.owner.LoginDto"
 		parameterType="roomForRent.dto.owner.LoginDto">
 		
 		SELECT
-		*
+			*
 		FROM
 			TBL_USER
 		WHERE
@@ -65,7 +77,7 @@
 	</insert>
 
 	<select id="getFacebookId"
-		resultType="roomForRent.dto.owner.LoginDto"
+		resultType="Integer"
 		parameterType="roomForRent.dto.owner.LoginDto">
 		
 		SELECT
@@ -87,7 +99,7 @@
 		FROM
 			TBL_USER
 		WHERE
-			user_id=#{user_id}
+			facebook_id=#{facebook_id}
 		AND
 			delete_flag=0
 		AND

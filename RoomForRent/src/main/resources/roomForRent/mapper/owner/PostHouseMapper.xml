@@ -68,10 +68,10 @@
 		resultType="roomForRent.dto.renter.HouseDto"
 		parameterType="String">
 		SELECT
-		*
+			*
 		FROM
-		TBL_HOUSE
+			TBL_HOUSE
 		WHERE
-		user_id=#{user_id}
+			user_id=#{user_id}
 	</select>
 </mapper>
