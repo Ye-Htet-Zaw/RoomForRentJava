@@ -1,15 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="roomForRent.mapper.renter.FavouriteMapper">
-<select id="getAllFavouriteListWithUserId"
-		resultType="roomForRent.dto.renter.FavouriteDto"
-		parameterType="String">
-		SELECT
+	<select id="getAllFavouriteListWithUserId"
+			resultType="roomForRent.dto.renter.FavouriteDto"
+			parameterType="String">
+		SELECT 
 			*
-		FROMS
+		FROM 
 			TBL_FAVOURITE
 		WHERE
 			user_id=#{user_id}
+	</select>
+	<select id="getFavHouseListWithUserId"
+			resultType="roomForRent.dto.renter.HouseDto"
+			parameterType="String">
+		SELECT 
+			*
+		FROM 
+			TBL_HOUSE
+		INNER JOIN 
+			TBL_FAVOURITE
+		ON
+			TBL_HOUSE.house_id=TBL_FAVOURITE.house_id
+		AND 
+			TBL_FAVOURITE.user_id= #{user_id}
 	</select>
 	<insert id="saveFavouriteInfo"
 		parameterType="roomForRent.dto.renter.FavouriteDto">

@@ -30,5 +30,7 @@ public interface FavouriteMapper {
 	
 	List<HouseDto> getFavouritHouseList();
 
-	void deleteFavouriteWithUserAndHouseId(FavouriteDto favouriteDto);	
+	void deleteFavouriteWithUserAndHouseId(FavouriteDto favouriteDto);
+
+	List<HouseDto> getFavHouseListWithUserId(String user_id);	
 }

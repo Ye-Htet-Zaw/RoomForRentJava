@@ -35,6 +35,11 @@ public class FavouriteController {
 		return favouriteService.getAllFavouriteListWithUserId(user_id);
 	}
 	
+	@GetMapping("/getFavHouseListWithUserId/{USER_ID}")
+	private List<HouseDto> getFavHouseListWithUserId(@PathVariable(value = "USER_ID")String user_id) {
+		return favouriteService.getFavHouseListWithUserId(user_id);
+	}
+	
 	@PostMapping("/saveFavouriteInfo")
 	private List<FavouriteDto> saveFavouriteInfo(@Valid @RequestBody FavouriteDto favouriteDto) {
 		favouriteDto.setFavourite_id(idCreatorController.createId(favouriteDto.getFavourite_id()));

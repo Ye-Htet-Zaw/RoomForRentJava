@@ -48,4 +48,12 @@ public class FavouriteService {
 		favouriteMapper.deleteFavouriteWithUserAndHouseId(favouriteDto);
 	}
 
+	public List<HouseDto> getFavHouseListWithUserId(String user_id) {
+		return favouriteMapper.getFavHouseListWithUserId(user_id);
+	}
+
+	public List<HouseDto> aa(String user_id) {
+		return null;
+	}
+
 }
