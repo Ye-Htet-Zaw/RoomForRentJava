@@ -62,9 +62,9 @@ public class UserLoginController {
 	 */
 	@PostMapping("/createFacebookAccount")
 	public List<LoginDto> createFbUser(@RequestBody LoginDto loginDto) {
-		
 		user_id=idCreatorController.createId(loginDto.getUser_id());
 		loginDto.setUser_id(user_id);
+		loginDto.setCreator_id(user_id);
 		userLoginService.createFbUser(loginDto);
 		return userLoginService.getUserAll();
 	}
