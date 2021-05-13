@@ -4,286 +4,286 @@
 	<select id="getAllRoomList"
 		resultType="roomForRent.dto.renter.HouseDto">
 		SELECT
-		*
+			*
 		FROM
-		TBL_HOUSE
+			TBL_HOUSE
 		WHERE
-		delete_FLAG=0
+			delete_FLAG=0
 		AND
-		rent_FLAG=0
+			rent_FLAG=0
 	</select>
 
 	<select id="getCategoryId" resultType="String"
 		parameterType="String">
 		SELECT
-		CATEGORY_ID
+			CATEGORY_ID
 		FROM
-		TBL_CATEGORY
+			TBL_CATEGORY
 		WHERE
-		CATEGORY_NAME=#{categoryName}
+			CATEGORY_NAME=#{categoryName}
 		AND
-		DELETE_FLAG=0
+			DELETE_FLAG=0
 	</select>
 	<select id="getRoomListByCategory"
 		resultType="roomForRent.dto.renter.HouseDto" parameterType="String">
 		SELECT
-		*
+			*
 		FROM
-		TBL_HOUSE
+			TBL_HOUSE
 		WHERE
-		category_ID=#{categoryId}
+			category_ID=#{categoryId}
 		AND
-		delete_FLAG=0
+			delete_FLAG=0
 		AND
-		rent_FLAG=0
+			rent_FLAG=0
 	</select>
 	<select id="getRoomListByTownship"
 		resultType="roomForRent.dto.renter.HouseDto" parameterType="String">
 		SELECT
-		*
+			*
 		FROM
-		TBL_HOUSE
+			TBL_HOUSE
 		WHERE
-		township=#{township}
+			township=#{township}
 		AND
-		delete_FLAG=0
+			delete_FLAG=0
 		AND
-		rent_FLAG=0
+			rent_FLAG=0
 	</select>
 	<select id="getRoomListByAmount"
 		resultType="roomForRent.dto.renter.HouseDto" parameterType="Integer">
 		SELECT
-		*
+			*
 		FROM
-		TBL_HOUSE
+			TBL_HOUSE
 		WHERE
-		rent &lt;= #{rentprice}+50000
+			rent &lt;= #{rentprice}+50000
 		AND
-		rent &gt;= #{rentprice}-50000
+			rent &gt;= #{rentprice}-50000
 		AND
-		delete_FLAG=0
+			delete_FLAG=0
 		AND
-		rent_FLAG=0
+			rent_FLAG=0
 	</select>
 	<select id="getRoomListByPeroid"
 		resultType="roomForRent.dto.renter.HouseDto" parameterType="Integer">
 		SELECT
-		*
+			*
 		FROM
-		TBL_HOUSE
+			TBL_HOUSE
 		WHERE
-		period=#{period}
+			period=#{period}
 		AND
-		delete_FLAG=0
+			delete_FLAG=0
 		AND
-		rent_FLAG=0
+			rent_FLAG=0
 	</select>
 
 	<select id="getRoomListByCategoryAndTownShip"
 		resultType="roomForRent.dto.renter.HouseDto"
 		parameterType="roomForRent.dto.renter.SearchParameterDto">
 		SELECT
-		*
+			*
 		FROM
-		TBL_HOUSE
+			TBL_HOUSE
 		WHERE
-		category_ID=#{CATEGORY_ID}
+			category_ID=#{CATEGORY_ID}
 		AND
-		township=#{TOWNSHIP}
+			township=#{TOWNSHIP}
 		AND
-		delete_FLAG=0
+			delete_FLAG=0
 		AND
-		rent_FLAG=0
+			rent_FLAG=0
 	</select>
 	<select id="getRoomListByCategoryAndAmount"
 		resultType="roomForRent.dto.renter.HouseDto"
 		parameterType="roomForRent.dto.renter.SearchParameterDto">
 		SELECT
-		*
+			*
 		FROM
-		TBL_HOUSE
+			TBL_HOUSE
 		WHERE
-		category_ID=#{CATEGORY_ID}
+			category_ID=#{CATEGORY_ID}
 		AND
-		rent &lt;= #{RENT}+50000
+			rent &lt;= #{RENT}+50000
 		AND
-		rent &gt;= #{RENT}-50000
+			rent &gt;= #{RENT}-50000
 		AND
-		delete_FLAG=0
+			delete_FLAG=0
 		AND
-		rent_FLAG=0
+			rent_FLAG=0
 	</select>
 	<select id="getRoomListByCategoryAndPeriod"
 		resultType="roomForRent.dto.renter.HouseDto"
 		parameterType="roomForRent.dto.renter.SearchParameterDto">
 		SELECT
-		*
+			*
 		FROM
-		TBL_HOUSE
+			TBL_HOUSE
 		WHERE
-		category_ID=#{CATEGORY_ID}
+			category_ID=#{CATEGORY_ID}
 		AND
-		period=#{PERIOD}
+			period=#{PERIOD}
 		AND
-		delete_FLAG=0
+			delete_FLAG=0
 		AND
-		rent_FLAG=0
+			rent_FLAG=0
 	</select>
 	<select id="getRoomListByTownshipAndRent"
 		resultType="roomForRent.dto.renter.HouseDto"
 		parameterType="roomForRent.dto.renter.SearchParameterDto">
 		SELECT
-		*
+			*
 		FROM
-		TBL_HOUSE
+			TBL_HOUSE
 		WHERE
-		township=#{TOWNSHIP}
+			township=#{TOWNSHIP}
 		AND
-		rent &lt;= #{RENT}+50000
+			rent &lt;= #{RENT}+50000
 		AND
-		rent &gt;= #{RENT}-50000
+			rent &gt;= #{RENT}-50000
 		AND
-		delete_FLAG=0
+			delete_FLAG=0
 		AND
-		rent_FLAG=0
+			rent_FLAG=0
 	</select>
 	<select id="getRoomListByTownshipAndPeriod"
 		resultType="roomForRent.dto.renter.HouseDto"
 		parameterType="roomForRent.dto.renter.SearchParameterDto">
 		SELECT
-		*
+			*
 		FROM
-		TBL_HOUSE
+			TBL_HOUSE
 		WHERE
-		township=#{TOWNSHIP}
+			township=#{TOWNSHIP}
 		AND
-		period=#{PERIOD}
+			period=#{PERIOD}
 		AND
-		delete_FLAG=0
+			delete_FLAG=0
 		AND
-		rent_FLAG=0
+			rent_FLAG=0
 	</select>
 	<select id="getRoomListByAmountAndPeriod"
 		resultType="roomForRent.dto.renter.HouseDto"
 		parameterType="roomForRent.dto.renter.SearchParameterDto">
 		SELECT
-		*
+			*
 		FROM
-		TBL_HOUSE
+			TBL_HOUSE
 		WHERE
-		rent &lt;= #{RENT}+50000
+			rent &lt;= #{RENT}+50000
 		AND
-		rent &gt;= #{RENT}-50000
+			rent &gt;= #{RENT}-50000
 		AND
-		period=#{PERIOD}
+			period=#{PERIOD}
 		AND
-		delete_FLAG=0
+			delete_FLAG=0
 		AND
-		rent_FLAG=0
+			rent_FLAG=0
 	</select>
 	
 	<select id="getRoomListByCategoryAndAddressAndPeriod"
 		resultType="roomForRent.dto.renter.HouseDto"
 		parameterType="roomForRent.dto.renter.SearchParameterDto">
 		SELECT
-		*
+			*
 		FROM
-		TBL_HOUSE
+			TBL_HOUSE
 		WHERE
-		category_ID=#{CATEGORY_ID}
+			category_ID=#{CATEGORY_ID}
 		AND
-		township=#{TOWNSHIP}
+			township=#{TOWNSHIP}
 		AND
-		period=#{PERIOD}
+			period=#{PERIOD}
 		AND
-		delete_FLAG=0
+			delete_FLAG=0
 		AND
-		rent_FLAG=0
+			rent_FLAG=0
 	</select>
 	
 	<select id="getRoomListByCategoryAndAddressAndAmount"
 		resultType="roomForRent.dto.renter.HouseDto"
 		parameterType="roomForRent.dto.renter.SearchParameterDto">
 		SELECT
-		*
+			*
 		FROM
-		TBL_HOUSE
+			TBL_HOUSE
 		WHERE
-		category_ID=#{CATEGORY_ID}
+			category_ID=#{CATEGORY_ID}
 		AND
-		township=#{TOWNSHIP}
+			township=#{TOWNSHIP}
 		AND
-		rent &lt;= #{RENT}+50000
+			rent &lt;= #{RENT}+50000
 		AND
-		rent &gt;= #{RENT}-50000
+			rent &gt;= #{RENT}-50000
 		AND
-		delete_FLAG=0
+			delete_FLAG=0
 		AND
-		rent_FLAG=0
+			rent_FLAG=0
 	</select>
 	
 	<select id="getRoomListByCategoryAndAmountAndPeriod"
 		resultType="roomForRent.dto.renter.HouseDto"
 		parameterType="roomForRent.dto.renter.SearchParameterDto">
 		SELECT
-		*
+			*
 		FROM
-		TBL_HOUSE
+			TBL_HOUSE
 		WHERE
-		category_ID=#{CATEGORY_ID}
+			category_ID=#{CATEGORY_ID}
 		AND
-		rent &lt;= #{RENT}+50000
+			rent &lt;= #{RENT}+50000
 		AND
-		rent &gt;= #{RENT}-50000
+			rent &gt;= #{RENT}-50000
 		AND
-		period=#{PERIOD}
+			period=#{PERIOD}
 		AND
-		delete_FLAG=0
+			delete_FLAG=0
 		AND
-		rent_FLAG=0
+			rent_FLAG=0
 	</select>
 	
 	<select id="getRoomListByAddressAndAmountAndPeriod"
 		resultType="roomForRent.dto.renter.HouseDto"
 		parameterType="roomForRent.dto.renter.SearchParameterDto">
 		SELECT
-		*
+			*
 		FROM
-		TBL_HOUSE
+			TBL_HOUSE
 		WHERE
-		township=#{TOWNSHIP}
+			township=#{TOWNSHIP}
 		AND
-		rent &lt;= #{RENT}+50000
+			rent &lt;= #{RENT}+50000
 		AND
-		rent &gt;= #{RENT}-50000
+			rent &gt;= #{RENT}-50000
 		AND
-		period=#{PERIOD}
+			period=#{PERIOD}
 		AND
-		delete_FLAG=0
+			delete_FLAG=0
 		AND
-		rent_FLAG=0
+			rent_FLAG=0
 	</select>
 	
 	<select id="getRoomListByAll"
 		resultType="roomForRent.dto.renter.HouseDto"
 		parameterType="roomForRent.dto.renter.SearchParameterDto">
 		SELECT
-		*
+			*
 		FROM
-		TBL_HOUSE
+			TBL_HOUSE
 		WHERE
-		category_ID=#{CATEGORY_ID}
+			category_ID=#{CATEGORY_ID}
 		AND
-		township=#{TOWNSHIP}
+			township=#{TOWNSHIP}
 		AND
-		rent &lt;= #{RENT}+50000
+			rent &lt;= #{RENT}+50000
 		AND
-		rent &gt;= #{RENT}-50000
+			rent &gt;= #{RENT}-50000
 		AND
-		period=#{PERIOD}
+			period=#{PERIOD}
 		AND
-		delete_FLAG=0
+			delete_FLAG=0
 		AND
-		rent_FLAG=0
+			rent_FLAG=0
 	</select>
 </mapper>
