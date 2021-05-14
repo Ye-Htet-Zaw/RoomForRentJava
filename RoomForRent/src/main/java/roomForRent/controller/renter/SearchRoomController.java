@@ -30,7 +30,6 @@ public class SearchRoomController {
 	 */
 	@GetMapping("/getAllRoomList")
 	public List<HouseDto> getAllRoomList() {
-		System.out.println(searchRoomService.getAllRoomList().size());
 		return searchRoomService.getAllRoomList();
 	}
 
