@@ -17,9 +17,18 @@ import roomForRent.dto.renter.HouseDto;
 @Mapper
 public interface PostHouseMapper {
 
+	/**
+	 * create house
+	 * @param houseDto
+	 */
 	void createHouse(HouseDto houseDto);
 	
 
+	/**
+	 * get house list
+	 * @param user_ID
+	 * @return
+	 */
 	List<HouseDto> getAllHouseListWithOwnerId(String user_ID);
 
 }

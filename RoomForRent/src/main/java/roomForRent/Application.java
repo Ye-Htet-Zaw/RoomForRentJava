@@ -1,7 +1,3 @@
-
-
-
-
 package roomForRent;
 
 import javax.servlet.MultipartConfigElement;
@@ -18,6 +14,10 @@ public class Application {
 
 	}
 	
+	/**
+	 * set the file size of post data
+	 * @return
+	 */
 	@Bean  
 	public MultipartConfigElement multipartConfigElement() {
 		MultipartConfigFactory factory = new MultipartConfigFactory();

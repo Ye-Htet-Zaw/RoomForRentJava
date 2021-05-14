@@ -33,6 +33,11 @@ public class PostHouseController {
 	
 	String houseId;
 	
+	/**
+	 * Create House
+	 * @param houseDto
+	 * @return house list
+	 */
 	@PostMapping("/createHouse")
 	public List<HouseDto> createHouse(@RequestBody HouseDto houseDto) {
 		houseId=idCreatorController.createId(houseDto.getHouse_ID());
@@ -41,6 +46,13 @@ public class PostHouseController {
 		return postHouseService.getAllHouseListWithOwnerId(houseDto.getUser_ID());
 	}
 	
+	
+	/**
+	 * add single image to static folder
+	 * @param file
+	 * @param path
+	 * @param imagename
+	 */
 	@PostMapping("/uploadImages")
     public void uploadFile(@RequestParam("file") MultipartFile file, String path,Integer imagename) {
 		
@@ -48,6 +60,12 @@ public class PostHouseController {
 
     }
 		
+	
+	/**
+	 * 
+	 * add multiple to static folder
+	 * @param files
+	 */
 	@PostMapping("/uploadMultipleFiles")
 	 public void uploadMultipleFiles(@RequestParam("imageupload") MultipartFile[] files) {
 		  String path = "src\\main\\resources\\static\\image\\house\\";
