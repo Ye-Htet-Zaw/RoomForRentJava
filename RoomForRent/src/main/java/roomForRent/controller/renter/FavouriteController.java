@@ -119,6 +119,6 @@ public class FavouriteController {
 		favouriteDto.setUser_id(user_id);
 		favouriteDto.setHouse_id(house_id);
 		favouriteService.deleteFavouriteWithUserAndHouseId(favouriteDto);
-		return favouriteService.getFavouritHouseList();
+		return favouriteService.getFavHouseListWithUserId(user_id);
 	}
 }
