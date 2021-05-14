@@ -70,7 +70,6 @@ public class PostHouseController {
 	 public void uploadMultipleFiles(@RequestParam("imageupload") MultipartFile[] files) {
 		  String path = "src\\main\\resources\\static\\image\\house\\";
 		  File ss = new File(path+houseId);
-		  System.out.println(houseId);
 		  String filePath = null;
 		  Integer imagename=0;
 		  if(ss.mkdir()) {
