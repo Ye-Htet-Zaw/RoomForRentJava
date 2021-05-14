@@ -30,6 +30,11 @@ public class HouseDetailController {
 	
 	private Path fileStorageLocation;
 	
+	/**
+	 * Get House Info
+	 * @param houseId
+	 * @return HouseDetailDto
+	 */
 	@GetMapping("/houseDetail/{id}")
 	public HouseDetailDto getHouseDetailById(@PathVariable(value = "id") String houseId) {	
 		HouseDetailDto houseDetailById = houseDetailService.getHouseDetailById(houseId);	
@@ -39,32 +44,35 @@ public class HouseDetailController {
 			boolean imageExists = storeFile(path, j);
 			if (imageExists == true) {
 				test.add("http://192.168.0.107:8080/image/house/"+houseId+"/"+j+".jpg");
-				System.out.println(test);
 			};
 		}
 		houseDetailById.setHouse_image(test);
 		return houseDetailById;
 	}
 	
-	private Boolean storeFile(String path,Integer imagename) {
-    	
-	   	 this.fileStorageLocation = Paths.get(path)
-	   			 .toAbsolutePath()
-	                .normalize();
-	   	 
-	   	 	try {
-	   	 			Files.createDirectories(this.fileStorageLocation);
-	   	 		} catch (IOException e) {
-	   	 			e.printStackTrace();
-	   	 		}
-	   	 	String imName=imagename.toString()+".jpg";
-	   	 	// Normalize file name
-	   	 	String fileName = StringUtils.cleanPath(imName);
+	/**
+	 * Check Image Exists
+	 * @param path
+	 * @param imagename
+	 * @return Boolean
+	 */
+	private Boolean storeFile(String path, Integer imagename) {
 
-	        Path targetLocation =  this.fileStorageLocation.resolve(fileName);
-	         
-	        boolean imageExists = Files.isExecutable(targetLocation);
-	   
-			return imageExists;
-	   }
+		this.fileStorageLocation = Paths.get(path).toAbsolutePath().normalize();
+
+		try {
+			Files.createDirectories(this.fileStorageLocation);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		String imName = imagename.toString() + ".jpg";
+		// Normalize file name
+		String fileName = StringUtils.cleanPath(imName);
+
+		Path targetLocation = this.fileStorageLocation.resolve(fileName);
+
+		boolean imageExists = Files.isExecutable(targetLocation);
+
+		return imageExists;
+	}
 }
