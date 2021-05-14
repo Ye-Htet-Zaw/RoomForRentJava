@@ -20,38 +20,50 @@ public class IDCreatorController {
 
 	@Autowired
 	IDCreatorService idCreatorService;
-	
+
+	/**
+	 * get maximum id of tables
+	 * 
+	 * @param idKey
+	 * @return maximum id of tables
+	 */
 	@GetMapping("/getOneID/{idKey}")
-	public String getOneID(@PathVariable(value = "idKey")String idKey) {
+	public String getOneID(@PathVariable(value = "idKey") String idKey) {
 		String id = "";
 		switch (idKey) {
-		case "USE":{
+		case "USE": {
 			id = idCreatorService.getOneUserID();
 			break;
 		}
-		case "HOU":{
+		case "HOU": {
 			id = idCreatorService.getOneHouseID();
 			break;
 		}
-		case "FAV":{
+		case "FAV": {
 			id = idCreatorService.getOneFavouriteID();
 			break;
 		}
 		}
 		return id;
-		}
-	
-	@GetMapping("/createId/{idKey}")
-	public String createId(@PathVariable(value = "idKey")String idKey) {
-		String generatedID ="";
-		String id = getOneID(idKey);                
-        if (id != null) {   
-            int maxId = Integer.parseInt(id.substring(3)) + 1;
-            generatedID = idKey + String.format("%07d", maxId);
-        }else {
-        	generatedID = idKey+"0000001";
-        }
-		return generatedID; 
 	}
-	
+
+	/**
+	 * create id
+	 * 
+	 * @param idKey
+	 * @return created id
+	 */
+	@GetMapping("/createId/{idKey}")
+	public String createId(@PathVariable(value = "idKey") String idKey) {
+		String generatedID = "";
+		String id = getOneID(idKey);
+		if (id != null) {
+			int maxId = Integer.parseInt(id.substring(3)) + 1;
+			generatedID = idKey + String.format("%07d", maxId);
+		} else {
+			generatedID = idKey + "0000001";
+		}
+		return generatedID;
+	}
+
 }

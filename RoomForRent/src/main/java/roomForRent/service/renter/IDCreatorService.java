@@ -19,14 +19,27 @@ public class IDCreatorService {
 	@Autowired
 	IDCreatorMapper idCreatorMapper;
 	
+	
+	/**
+	 * get maximum id of user table 
+	 * @return maximum id of user table
+	 */
 	public String getOneUserID() {
 		return idCreatorMapper.getOneUserID();
 	}
 
+	/**
+	 * get maximum id of house table 
+	 * @return maximum id of house table
+	 */
 	public String getOneHouseID() {
 		return idCreatorMapper.getOneHouseID();
 	}
 
+	/**
+	 * get maximum id of favourite table 
+	 * @return maximum id of favourite table
+	 */
 	public String getOneFavouriteID() {
 		return idCreatorMapper.getOneFavouriteID();
 	}

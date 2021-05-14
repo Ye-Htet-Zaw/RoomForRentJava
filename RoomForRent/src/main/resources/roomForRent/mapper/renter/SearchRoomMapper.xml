@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+*
+* Search Room Mapper
+*
+* 2021/03/05  KMMN Create New
+*
+* search rooms by category,address,amount and peroid
+-->
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="roomForRent.mapper.renter.SearchRoomMapper">
-	<select id="getAllRoomList"
-		resultType="roomForRent.dto.renter.HouseDto">
+	<select id="getAllRoomList" resultType="roomForRent.dto.renter.HouseDto">
 		SELECT
 			*
 		FROM
@@ -13,8 +20,7 @@
 			rent_FLAG=0
 	</select>
 
-	<select id="getCategoryId" resultType="String"
-		parameterType="String">
+	<select id="getCategoryId" resultType="String" parameterType="String">
 		SELECT
 			CATEGORY_ID
 		FROM
@@ -24,8 +30,7 @@
 		AND
 			DELETE_FLAG=0
 	</select>
-	<select id="getRoomListByCategory"
-		resultType="roomForRent.dto.renter.HouseDto" parameterType="String">
+	<select id="getRoomListByCategory" resultType="roomForRent.dto.renter.HouseDto" parameterType="String">
 		SELECT
 			*
 		FROM
@@ -37,8 +42,7 @@
 		AND
 			rent_FLAG=0
 	</select>
-	<select id="getRoomListByTownship"
-		resultType="roomForRent.dto.renter.HouseDto" parameterType="String">
+	<select id="getRoomListByTownship" resultType="roomForRent.dto.renter.HouseDto" parameterType="String">
 		SELECT
 			*
 		FROM
@@ -50,8 +54,7 @@
 		AND
 			rent_FLAG=0
 	</select>
-	<select id="getRoomListByAmount"
-		resultType="roomForRent.dto.renter.HouseDto" parameterType="Integer">
+	<select id="getRoomListByAmount" resultType="roomForRent.dto.renter.HouseDto" parameterType="Integer">
 		SELECT
 			*
 		FROM
@@ -65,8 +68,7 @@
 		AND
 			rent_FLAG=0
 	</select>
-	<select id="getRoomListByPeroid"
-		resultType="roomForRent.dto.renter.HouseDto" parameterType="Integer">
+	<select id="getRoomListByPeroid" resultType="roomForRent.dto.renter.HouseDto" parameterType="Integer">
 		SELECT
 			*
 		FROM
@@ -79,9 +81,7 @@
 			rent_FLAG=0
 	</select>
 
-	<select id="getRoomListByCategoryAndTownShip"
-		resultType="roomForRent.dto.renter.HouseDto"
-		parameterType="roomForRent.dto.renter.SearchParameterDto">
+	<select id="getRoomListByCategoryAndTownShip" resultType="roomForRent.dto.renter.HouseDto" parameterType="roomForRent.dto.renter.SearchParameterDto">
 		SELECT
 			*
 		FROM
@@ -95,9 +95,7 @@
 		AND
 			rent_FLAG=0
 	</select>
-	<select id="getRoomListByCategoryAndAmount"
-		resultType="roomForRent.dto.renter.HouseDto"
-		parameterType="roomForRent.dto.renter.SearchParameterDto">
+	<select id="getRoomListByCategoryAndAmount" resultType="roomForRent.dto.renter.HouseDto" parameterType="roomForRent.dto.renter.SearchParameterDto">
 		SELECT
 			*
 		FROM
@@ -113,9 +111,7 @@
 		AND
 			rent_FLAG=0
 	</select>
-	<select id="getRoomListByCategoryAndPeriod"
-		resultType="roomForRent.dto.renter.HouseDto"
-		parameterType="roomForRent.dto.renter.SearchParameterDto">
+	<select id="getRoomListByCategoryAndPeriod" resultType="roomForRent.dto.renter.HouseDto" parameterType="roomForRent.dto.renter.SearchParameterDto">
 		SELECT
 			*
 		FROM
@@ -129,9 +125,7 @@
 		AND
 			rent_FLAG=0
 	</select>
-	<select id="getRoomListByTownshipAndRent"
-		resultType="roomForRent.dto.renter.HouseDto"
-		parameterType="roomForRent.dto.renter.SearchParameterDto">
+	<select id="getRoomListByTownshipAndRent" resultType="roomForRent.dto.renter.HouseDto" parameterType="roomForRent.dto.renter.SearchParameterDto">
 		SELECT
 			*
 		FROM
@@ -147,9 +141,7 @@
 		AND
 			rent_FLAG=0
 	</select>
-	<select id="getRoomListByTownshipAndPeriod"
-		resultType="roomForRent.dto.renter.HouseDto"
-		parameterType="roomForRent.dto.renter.SearchParameterDto">
+	<select id="getRoomListByTownshipAndPeriod" resultType="roomForRent.dto.renter.HouseDto" parameterType="roomForRent.dto.renter.SearchParameterDto">
 		SELECT
 			*
 		FROM
@@ -163,9 +155,7 @@
 		AND
 			rent_FLAG=0
 	</select>
-	<select id="getRoomListByAmountAndPeriod"
-		resultType="roomForRent.dto.renter.HouseDto"
-		parameterType="roomForRent.dto.renter.SearchParameterDto">
+	<select id="getRoomListByAmountAndPeriod" resultType="roomForRent.dto.renter.HouseDto" parameterType="roomForRent.dto.renter.SearchParameterDto">
 		SELECT
 			*
 		FROM
@@ -182,9 +172,7 @@
 			rent_FLAG=0
 	</select>
 	
-	<select id="getRoomListByCategoryAndAddressAndPeriod"
-		resultType="roomForRent.dto.renter.HouseDto"
-		parameterType="roomForRent.dto.renter.SearchParameterDto">
+	<select id="getRoomListByCategoryAndAddressAndPeriod" resultType="roomForRent.dto.renter.HouseDto" parameterType="roomForRent.dto.renter.SearchParameterDto">
 		SELECT
 			*
 		FROM
@@ -201,9 +189,7 @@
 			rent_FLAG=0
 	</select>
 	
-	<select id="getRoomListByCategoryAndAddressAndAmount"
-		resultType="roomForRent.dto.renter.HouseDto"
-		parameterType="roomForRent.dto.renter.SearchParameterDto">
+	<select id="getRoomListByCategoryAndAddressAndAmount" resultType="roomForRent.dto.renter.HouseDto" parameterType="roomForRent.dto.renter.SearchParameterDto">
 		SELECT
 			*
 		FROM
@@ -222,9 +208,7 @@
 			rent_FLAG=0
 	</select>
 	
-	<select id="getRoomListByCategoryAndAmountAndPeriod"
-		resultType="roomForRent.dto.renter.HouseDto"
-		parameterType="roomForRent.dto.renter.SearchParameterDto">
+	<select id="getRoomListByCategoryAndAmountAndPeriod" resultType="roomForRent.dto.renter.HouseDto" parameterType="roomForRent.dto.renter.SearchParameterDto">
 		SELECT
 			*
 		FROM
@@ -243,9 +227,7 @@
 			rent_FLAG=0
 	</select>
 	
-	<select id="getRoomListByAddressAndAmountAndPeriod"
-		resultType="roomForRent.dto.renter.HouseDto"
-		parameterType="roomForRent.dto.renter.SearchParameterDto">
+	<select id="getRoomListByAddressAndAmountAndPeriod" resultType="roomForRent.dto.renter.HouseDto" parameterType="roomForRent.dto.renter.SearchParameterDto">
 		SELECT
 			*
 		FROM
@@ -264,9 +246,7 @@
 			rent_FLAG=0
 	</select>
 	
-	<select id="getRoomListByAll"
-		resultType="roomForRent.dto.renter.HouseDto"
-		parameterType="roomForRent.dto.renter.SearchParameterDto">
+	<select id="getRoomListByAll" resultType="roomForRent.dto.renter.HouseDto" parameterType="roomForRent.dto.renter.SearchParameterDto">
 		SELECT
 			*
 		FROM

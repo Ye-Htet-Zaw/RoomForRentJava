@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+*
+* HouseDetailService
+*
+* 2021/04/20 KMMN Create New
+*
+* save favourite info
+-->
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="roomForRent.mapper.renter.FavouriteMapper">
-	<select id="getAllFavouriteListWithUserId"
-			resultType="roomForRent.dto.renter.FavouriteDto"
-			parameterType="String">
+	<select id="getAllFavouriteListWithUserId" resultType="roomForRent.dto.renter.FavouriteDto" parameterType="String">
 		SELECT 
 			*
 		FROM 
@@ -11,9 +17,7 @@
 		WHERE
 			user_id=#{user_id}
 	</select>
-	<select id="getFavHouseListWithUserId"
-			resultType="roomForRent.dto.renter.HouseDto"
-			parameterType="String">
+	<select id="getFavHouseListWithUserId" resultType="roomForRent.dto.renter.HouseDto" parameterType="String">
 		SELECT 
 			*
 		FROM 
@@ -25,8 +29,7 @@
 		AND 
 			TBL_FAVOURITE.user_id= #{user_id}
 	</select>
-	<insert id="saveFavouriteInfo"
-		parameterType="roomForRent.dto.renter.FavouriteDto">
+	<insert id="saveFavouriteInfo" parameterType="roomForRent.dto.renter.FavouriteDto">
 		INSERT INTO
 			TBL_FAVOURITE
 			(FAVOURITE_ID
@@ -47,9 +50,7 @@
 		WHERE 
 			FAVOURITE_ID=#{favourite_id}
 	</delete>
-	<select id="getFavouriteId"
-		resultType="roomForRent.dto.renter.FavouriteDto"
-		parameterType="roomForRent.dto.renter.FavouriteDto">
+	<select id="getFavouriteId" resultType="roomForRent.dto.renter.FavouriteDto" parameterType="roomForRent.dto.renter.FavouriteDto">
 		SELECT
 			*
 		FROM
@@ -59,8 +60,7 @@
 		AND
 			house_id=#{house_id}
 	</select>
-	<select id="getFavouritHouseList"
-		resultType="roomForRent.dto.renter.HouseDto">
+	<select id="getFavouritHouseList" resultType="roomForRent.dto.renter.HouseDto">
 		SELECT 
 			*
 		FROM 
@@ -70,8 +70,7 @@
 		ON 
 			TBL_HOUSE.house_id=TBL_FAVOURITE.house_id
 	</select>
-	<delete id="deleteFavouriteWithUserAndHouseId"
-		parameterType="roomForRent.dto.renter.FavouriteDto">
+	<delete id="deleteFavouriteWithUserAndHouseId" parameterType="roomForRent.dto.renter.FavouriteDto">
 		DELETE FROM
 			TBL_FAVOURITE
 		WHERE
